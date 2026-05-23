@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AC Tonnage Calculator — Air Conditioner Size Estimator | TradeCalc.io</title>
+  <meta name="description" content="Free AC tonnage calculator for contractors and homeowners. Enter square footage, climate zone, and insulation quality to find the correct air conditioner size. Avoid costly oversizing mistakes.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tradecalc.io/hvac/ac-tonnage-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AC Tonnage Calculator — Air Conditioner Size Estimator | TradeCalc.io">
+  <meta property="og:description" content="Calculate the correct air conditioner tonnage for your space. Accounts for climate zone and insulation quality to avoid oversizing and short-cycling.">
+  <meta property="og:url" content="https://tradecalc.io/hvac/ac-tonnage-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TradeCalc.io">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AC Tonnage Calculator | TradeCalc.io">
+  <meta name="twitter:description" content="Determine the right AC tonnage for your space based on square footage, climate, and insulation.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tradecalc.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HVAC Calculators",
+          "item": "https://tradecalc.io/hvac/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AC Tonnage Calculator",
+          "item": "https://tradecalc.io/hvac/ac-tonnage-calculator.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AC tonnage and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AC tonnage refers to the cooling capacity of an air conditioner. One ton equals 12,000 BTUs of cooling per hour. The term originates from the amount of heat absorbed by one ton of ice melting over 24 hours. Tonnage matters because an undersized unit will struggle to cool your space while an oversized unit will short-cycle, leading to poor humidity control, uneven temperatures, and premature equipment failure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many tons of AC do I need per square foot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard rule of thumb is approximately 1 ton of cooling per 400–600 square feet, depending on climate and insulation. In a moderate climate with average insulation, plan for about 1 ton per 500 sq ft (0.002 tons per sq ft). In hot or humid climates, increase to 1 ton per 350–400 sq ft. Always enter your specific conditions into a calculator for a more accurate estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my AC is the wrong size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An undersized air conditioner will run continuously without reaching the set temperature, driving up energy bills and wearing out the compressor prematurely. An oversized unit short-cycles — it cools the space quickly but shuts off before removing enough humidity, leaving the air feeling clammy and uncomfortable. Short-cycling also causes excessive wear on the compressor and can lead to early system failure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the most common residential AC size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most common residential central air conditioner sizes are 2 ton (24,000 BTU) and 3 ton (36,000 BTU) units. A 2-ton system is suitable for homes of approximately 1,000–1,500 sq ft in moderate climates, while a 3-ton system typically covers 1,500–2,000 sq ft. However, climate, insulation, ceiling height, and sun exposure all affect the correct size for a specific home."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I oversize my AC for extra cooling power?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Oversizing an air conditioner is one of the most common and costly HVAC mistakes. A too-large unit will cool the air temperature quickly but will not run long enough to remove humidity effectively. This results in a cold, clammy feeling, mold and mildew risk, frequent on/off cycling that stresses the compressor, higher electricity costs, and reduced equipment lifespan. Always size your AC to match the calculated load."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-container">
+      <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../hvac/" class="nav-link active">HVAC</a>
+        <a href="../concrete/" class="nav-link">Concrete</a>
+        <a href="../landscaping/" class="nav-link">Landscaping</a>
+        <a href="../flooring/" class="nav-link">Flooring</a>
+        <a href="../roofing/" class="nav-link">Roofing</a>
+        <a href="../painting/" class="nav-link">Painting</a>
+        <a href="../hvac/btu-calculator.html" class="nav-link nav-cta">Start Calculating</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--c-white);border-bottom:1px solid var(--c-border)">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../hvac/">HVAC</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>AC Tonnage Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="calc-page-hero">
+    <div class="container">
+      <div class="badge badge-blue" style="margin-bottom:0.75rem">HVAC Calculator</div>
+      <h1>AC Tonnage Calculator</h1>
+      <p>Find the right air conditioner size for your space. Enter your square footage, climate zone, and insulation quality to calculate the exact tonnage and BTU capacity you need — no oversizing, no short-cycling.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR LAYOUT -->
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- LEFT: Form -->
+      <div>
+        <div class="calc-box">
+          <div class="calc-box-header"><h2>Enter Your Measurements</h2></div>
+          <div class="calc-box-body">
+            <form id="ac-form" onsubmit="return false">
+
+              <div class="form-group">
+                <label class="form-label" for="ac-sqft">Total Square Footage <span class="unit">(sq ft)</span></label>
+                <input type="number" id="ac-sqft" class="form-control" placeholder="e.g. 1500" min="1" step="1">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ac-climate">Climate Zone</label>
+                <select id="ac-climate" class="form-control">
+                  <option value="mild">Mild — Pacific Northwest, coastal areas</option>
+                  <option value="moderate" selected>Moderate — Most of the continental US</option>
+                  <option value="hot">Hot — Southern US, desert Southwest</option>
+                  <option value="hot-humid">Hot &amp; Humid — Deep South, Gulf Coast, Florida</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ac-insulation">Insulation Quality</label>
+                <select id="ac-insulation" class="form-control">
+                  <option value="poor">Poor — Older home, minimal insulation</option>
+                  <option value="average" selected>Average — Standard code-compliant insulation</option>
+                  <option value="good">Good — Well-insulated, modern construction</option>
+                </select>
+              </div>
+
+              <div style="display:flex;gap:1rem;margin-top:1.5rem">
+                <button type="button" class="btn btn-primary btn-full" onclick="calcACTonnage()">Calculate</button>
+                <button type="button" class="btn btn-secondary" onclick="resetCalc('ac-form','ac-results')">Reset</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- SEO Content -->
+        <div class="seo-content mt-6">
+          <h2>How to Size an Air Conditioner</h2>
+          <p>Choosing the correct AC tonnage is one of the most important decisions in any cooling system installation. The right size keeps your home comfortable, controls humidity, and minimizes energy costs. The wrong size — whether too large or too small — leads to comfort problems and shortened equipment life.</p>
+
+          <h3>What Is AC Tonnage?</h3>
+          <p><strong>1 ton of cooling = 12,000 BTU per hour.</strong> The term "ton" dates to the era of ice-based cooling, when one ton of ice would absorb 288,000 BTUs as it melted over 24 hours — equal to 12,000 BTU/hr. Modern residential central air conditioners range from 1.5 tons (18,000 BTU/hr) up to 5 tons (60,000 BTU/hr), sold in half-ton increments.</p>
+
+          <h3>Tonnage by Climate Zone</h3>
+          <ul>
+            <li><strong>Mild climate</strong> — Plan for approximately 1 ton per 550–650 sq ft (0.0025 tons/sq ft baseline).</li>
+            <li><strong>Moderate climate</strong> — The standard US baseline: roughly 1 ton per 400–500 sq ft.</li>
+            <li><strong>Hot climate</strong> — Desert Southwest, Southern US: 1 ton per 330–400 sq ft (0.003 tons/sq ft).</li>
+            <li><strong>Hot and humid</strong> — Gulf Coast, Florida, Deep South: 1 ton per 300–370 sq ft (0.0033 tons/sq ft). Humidity dramatically increases the effective cooling load.</li>
+          </ul>
+
+          <h3>Insulation's Impact on AC Size</h3>
+          <p>Insulation quality significantly affects how much heat enters or leaves your home. A poorly insulated home in any climate will require 20% more cooling capacity than the same home with good insulation. High-performance insulation reduces system requirements and dramatically lowers operating costs over the equipment's lifetime.</p>
+
+          <h3>SEER Ratings and Efficiency</h3>
+          <p>Once you know the correct tonnage, also consider the <strong>SEER (Seasonal Energy Efficiency Ratio)</strong> rating of the equipment. Higher SEER ratings mean lower operating costs. The federal minimum is 14 SEER in most regions (15 SEER in the Southeast and Southwest as of 2023). SEER ratings of 18–25 are available for premium efficiency units. A higher-SEER unit of the correct size is almost always a better investment than a lower-SEER unit, especially in hot climates where the AC runs frequently.</p>
+
+          <h3>Common AC Sizing Mistakes</h3>
+          <ul>
+            <li><strong>Using "one size up" for comfort</strong> — Oversizing causes short-cycling, poor humidity control, and early compressor failure.</li>
+            <li><strong>Ignoring humidity</strong> — In humid climates, latent cooling load (removing moisture from the air) can be as important as sensible cooling load (lowering air temperature). Undersized units struggle; oversized units never run long enough to dehumidify.</li>
+            <li><strong>Not accounting for sun exposure</strong> — South- and west-facing rooms with large windows can have dramatically higher cooling loads than the overall square footage suggests.</li>
+            <li><strong>Replacing with the same size</strong> — If the existing system was the wrong size, installing the same tonnage in a replacement perpetuates the problem. Always recalculate the load.</li>
+          </ul>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is AC tonnage and why does it matter?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                AC tonnage is a measure of <strong>cooling capacity</strong>. One ton equals 12,000 BTUs of heat removal per hour. The term comes from the early days of refrigeration, when ice was the cooling medium. Tonnage matters because the correct size ensures the system can maintain comfortable temperatures and humidity levels without wasting energy. An undersized system runs constantly, while an oversized system short-cycles and fails to dehumidify properly.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How many tons of AC do I need per square foot?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                A general rule of thumb is approximately <strong>1 ton per 400–600 square feet</strong>, depending on climate and insulation. In moderate climates with average insulation, plan for about 1 ton per 500 sq ft (0.002 tons/sq ft). In hot or humid climates, increase to 1 ton per 350–400 sq ft. Use the calculator above with your specific inputs for a more precise estimate. For a definitive answer, a Manual J load calculation by a licensed HVAC engineer is the industry standard.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What happens if my AC is the wrong size?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <strong>Undersized AC:</strong> The system runs continuously trying to reach the set temperature but can't keep up during peak heat. Energy bills skyrocket, comfort suffers, and the compressor wears out early from constant operation.<br><br>
+                <strong>Oversized AC:</strong> The unit blasts cold air and reaches the thermostat set point quickly, then shuts off — before removing enough humidity from the air. The result is a cold, clammy feeling, increased mold risk, frequent compressor start/stop cycles that cause mechanical wear, and higher operating costs per BTU delivered.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the most common residential AC size?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                The most common residential central air conditioner sizes are <strong>2 ton (24,000 BTU)</strong> and <strong>3 ton (36,000 BTU)</strong> units. A 2-ton system is suitable for homes of approximately 1,000–1,400 sq ft in moderate climates, while a 3-ton system typically covers 1,500–2,000 sq ft. In hotter climates, the appropriate size for those same square footages shifts upward. A 5-ton system (60,000 BTU) is generally the largest unit installed in a single residential system; larger homes may use two systems or a commercial-grade unit.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Should I oversize my AC for extra cooling power?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <strong>No — never oversize your AC.</strong> It is one of the most common and costly HVAC mistakes. A too-large unit cools the air temperature quickly but does not run long enough to remove humidity effectively. This results in a cold, clammy feeling indoors; increased risk of mold and mildew; frequent on/off cycling that stresses the compressor; higher electricity consumption per degree of cooling; and significantly shortened equipment lifespan. Bigger is not better in HVAC — right-sized is the goal.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: Results -->
+      <div>
+        <div class="results-box" id="ac-results">
+          <div class="results-box-header"><h2>Results</h2></div>
+          <div class="results-box-body">
+            <div class="results-empty">
+              <div class="results-empty-icon">&#129518;</div>
+              <p>Enter your measurements and click Calculate to see results.</p>
+            </div>
+            <div class="results-data" style="display:none">
+              <div class="result-highlight">
+                <div class="result-label">Recommended Unit Size</div>
+                <div class="result-value"><span id="res-ac-tons-rec">—</span> <span class="result-unit">tons</span></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Exact Tonnage Needed</div>
+                <div class="result-value"><span id="res-ac-tons">—</span> <span class="result-unit">tons</span></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">BTU Capacity Required</div>
+                <div class="result-value"><span id="res-ac-btus">—</span> <span class="result-unit">BTU/hr</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div style="margin-top:1.5rem">
+          <h3 style="font-size:var(--text-lg);margin-bottom:1rem">Related Calculators</h3>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <a href="btu-calculator.html" class="related-calc-link">
+              <div class="icon">&#127777;</div>
+              <div>
+                <div class="name">BTU Calculator</div>
+                <div class="cat">HVAC</div>
+              </div>
+              <span class="arrow">&#8250;</span>
+            </a>
+            <a href="cfm-calculator.html" class="related-calc-link">
+              <div class="icon">&#128168;</div>
+              <div>
+                <div class="name">CFM Calculator</div>
+                <div class="cat">HVAC</div>
+              </div>
+              <span class="arrow">&#8250;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+          <p>Professional trade &amp; contractor calculators for HVAC, construction, landscaping, and more. Free, fast, and accurate.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="../hvac/">HVAC Calculators</a></li>
+            <li><a href="../concrete/">Concrete Calculators</a></li>
+            <li><a href="../landscaping/">Landscaping Calculators</a></li>
+            <li><a href="../flooring/">Flooring Calculators</a></li>
+            <li><a href="../roofing/">Roofing Calculators</a></li>
+            <li><a href="../painting/">Painting Calculators</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <ul>
+            <li><a href="../hvac/btu-calculator.html">BTU Calculator</a></li>
+            <li><a href="../landscaping/gravel-calculator.html">Gravel Calculator</a></li>
+            <li><a href="../concrete/concrete-slab-calculator.html">Concrete Calculator</a></li>
+            <li><a href="../flooring/tile-calculator.html">Tile Calculator</a></li>
+            <li><a href="../painting/paint-coverage-calculator.html">Paint Calculator</a></li>
+            <li><a href="../roofing/roof-pitch-calculator.html">Roof Pitch Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TradeCalc.io — All rights reserved. Free contractor calculators updated for 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>

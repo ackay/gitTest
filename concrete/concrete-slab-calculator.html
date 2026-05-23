@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concrete Slab Calculator — Cubic Yards &amp; Bags | TradeCalc.io</title>
+  <meta name="description" content="Calculate cubic yards of concrete and number of bags needed for any slab. Free concrete calculator for contractors and DIY homeowners.">
+  <meta name="keywords" content="concrete slab calculator, cubic yards concrete, concrete bags calculator, how much concrete for slab, concrete estimator, 80lb bags per yard">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tradecalc.io/concrete/concrete-slab-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Concrete Slab Calculator — Cubic Yards &amp; Bags | TradeCalc.io">
+  <meta property="og:description" content="Calculate cubic yards of concrete and number of bags needed for any slab. Free concrete calculator for contractors and DIY homeowners.">
+  <meta property="og:url" content="https://tradecalc.io/concrete/concrete-slab-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TradeCalc.io">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Concrete Slab Calculator — Cubic Yards &amp; Bags | TradeCalc.io">
+  <meta name="twitter:description" content="Instantly calculate how many cubic yards of concrete and how many bags you need for your slab project.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tradecalc.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Concrete", "item": "https://tradecalc.io/concrete/" },
+          { "@type": "ListItem", "position": 3, "name": "Concrete Slab Calculator", "item": "https://tradecalc.io/concrete/concrete-slab-calculator.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many cubic yards of concrete do I need for a 10x10 slab?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A 10x10 foot slab at 4 inches thick requires approximately 1.23 cubic yards of concrete (10 × 10 × 0.333 ÷ 27 = 1.23 cu yd). Always add 5–10% extra, so order about 1.35 cubic yards to be safe."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many 80lb bags of concrete make a yard?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each 80 lb bag of concrete yields approximately 0.60 cubic feet. Since 1 cubic yard = 27 cubic feet, you need about 45 bags (27 ÷ 0.60 = 45) of 80 lb concrete to make one cubic yard."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What thickness should a concrete slab be?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard concrete slab thicknesses by application: sidewalks and walkways — 4 inches; residential patios — 3.5 to 4 inches; driveways for passenger cars — 4 inches; garage floors — 4 to 6 inches. Always consult local building codes for structural applications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I mix my own concrete for a large slab?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For slabs larger than about 1 cubic yard, ordering ready-mix concrete delivered by truck is strongly recommended. Mixing bags by hand is very labor-intensive and risks inconsistent mix quality. For a typical 10x10 slab at 4 inches thick (about 1.23 cu yd), you would need approximately 56 bags of 80 lb concrete — a significant mixing effort."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does concrete PSI mean and which do I need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PSI (pounds per square inch) measures concrete's compressive strength after 28 days of curing. For most residential slabs — driveways, patios, sidewalks, and garage floors — 3,000 PSI concrete is standard and sufficient. Use 3,500 to 4,000 PSI for slabs that will support heavy vehicles or for structural footings."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-container">
+      <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../hvac/" class="nav-link">HVAC</a>
+        <a href="../concrete/" class="nav-link active">Concrete</a>
+        <a href="../landscaping/" class="nav-link">Landscaping</a>
+        <a href="../flooring/" class="nav-link">Flooring</a>
+        <a href="../roofing/" class="nav-link">Roofing</a>
+        <a href="../painting/" class="nav-link">Painting</a>
+        <a href="../hvac/btu-calculator.html" class="nav-link nav-cta">Start Calculating</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--c-white);border-bottom:1px solid var(--c-border)">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../concrete/">Concrete</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Concrete Slab Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="calc-page-hero">
+    <div class="container">
+      <h1>Concrete Slab Calculator</h1>
+      <p>Enter your slab dimensions to instantly calculate cubic yards of concrete needed and the number of pre-mix bags required. Supports both 60 lb and 80 lb bags.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR LAYOUT -->
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- CALC BOX -->
+      <div class="calc-box">
+        <div class="calc-box-header">
+          <h2>Slab Dimensions</h2>
+        </div>
+        <div class="calc-box-body">
+          <form id="slab-form" onsubmit="return false;">
+
+            <div class="form-group">
+              <label class="form-label" for="slab-length">Slab Length <span class="unit">(feet)</span></label>
+              <input type="number" id="slab-length" class="form-control" placeholder="e.g. 10" min="0.1" step="0.01">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="slab-width">Slab Width <span class="unit">(feet)</span></label>
+              <input type="number" id="slab-width" class="form-control" placeholder="e.g. 10" min="0.1" step="0.01">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="slab-depth">Slab Depth / Thickness</label>
+                <input type="number" id="slab-depth" class="form-control" placeholder="e.g. 4" min="0.1" step="0.01">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="slab-depth-unit">Depth Unit</label>
+                <select id="slab-depth-unit" class="form-control">
+                  <option value="inches">Inches</option>
+                  <option value="feet">Feet</option>
+                </select>
+              </div>
+            </div>
+
+            <p class="form-hint" style="margin-top:-0.5rem;margin-bottom:1.25rem;">Common thicknesses: 4" driveway/sidewalk, 4–6" garage floor, 3.5" patio</p>
+
+            <button type="button" class="btn btn-primary btn-full" onclick="calcConcreteSlab()">Calculate Concrete</button>
+            <button type="button" class="btn btn-secondary btn-full" style="margin-top:0.75rem;" onclick="resetCalc('slab-form','slab-results')">Reset</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- RESULTS BOX -->
+      <div class="results-box" id="slab-results">
+        <div class="results-box-header">
+          <h2>Concrete Estimate</h2>
+        </div>
+        <div class="results-box-body">
+
+          <!-- Empty state -->
+          <div class="results-empty">
+            <div class="results-empty-icon">&#129521;</div>
+            <p>Enter your slab dimensions above and click <strong>Calculate Concrete</strong> to see your estimate.</p>
+          </div>
+
+          <!-- Results data (hidden until calculated) -->
+          <div class="results-data" style="display:none;">
+
+            <div class="alert alert-info">Always order 5-10% extra concrete to account for spillage and variations in sub-base depth.</div>
+
+            <div class="result-highlight">
+              <div class="result-label">Cubic Yards Needed</div>
+              <div class="result-value"><span id="res-cu-yd">—</span></div>
+              <div class="result-unit">cubic yards</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Cubic Feet</div>
+              <div class="result-value" style="font-size:var(--text-xl)"><span id="res-cu-ft">—</span> <span class="result-unit">cu ft</span></div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">60 lb Bags Needed</div>
+              <div class="result-value" style="font-size:var(--text-xl)"><span id="res-bags60">—</span> <span class="result-unit">bags</span></div>
+              <div class="result-note">Each 60 lb bag yields ~0.45 cu ft</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">80 lb Bags Needed</div>
+              <div class="result-value" style="font-size:var(--text-xl)"><span id="res-bags80">—</span> <span class="result-unit">bags</span></div>
+              <div class="result-note">Each 80 lb bag yields ~0.60 cu ft</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="seo-content mt-6">
+        <h2>How to Calculate Concrete for a Slab</h2>
+        <p>Calculating the right amount of concrete for a slab project is straightforward once you understand the formula. Concrete is sold by the <strong>cubic yard</strong>, so all dimensions must be converted to feet before calculating.</p>
+
+        <h3>The Concrete Volume Formula</h3>
+        <p>The standard formula for a rectangular slab is:</p>
+        <p><strong>Cubic Yards = (Length × Width × Thickness in feet) ÷ 27</strong></p>
+        <p>Since slab thickness is most commonly measured in inches, convert it to feet first by dividing by 12. For example, a 4-inch slab = 4 ÷ 12 = 0.333 feet. Then multiply length × width × 0.333 and divide by 27 to get cubic yards.</p>
+
+        <h3>Worked Example: 12 × 20 Foot Driveway Slab</h3>
+        <p>For a 12 ft × 20 ft driveway at 4 inches thick:</p>
+        <ul>
+          <li>Thickness in feet: 4 ÷ 12 = 0.333 ft</li>
+          <li>Cubic feet: 12 × 20 × 0.333 = 80 cu ft</li>
+          <li>Cubic yards: 80 ÷ 27 = 2.96 cu yd</li>
+          <li>Add 10% overage: 2.96 × 1.10 = 3.26 cu yd — order 3.5 cu yd</li>
+          <li>80 lb bags needed: 80 ÷ 0.60 = 134 bags (ready-mix is strongly recommended for this volume)</li>
+        </ul>
+
+        <h3>Bag Coverage Reference</h3>
+        <p>When mixing concrete from bags, the yield per bag depends on the bag weight:</p>
+        <ul>
+          <li><strong>60 lb bag</strong> — yields approximately 0.45 cubic feet</li>
+          <li><strong>80 lb bag</strong> — yields approximately 0.60 cubic feet</li>
+          <li><strong>40 lb bag</strong> — yields approximately 0.30 cubic feet (patch/repair use)</li>
+        </ul>
+        <p>To find bags needed from cubic feet: divide total cubic feet by the bag yield. For cubic yards: multiply cubic yards by 27 first to get cubic feet, then divide by bag yield.</p>
+
+        <h3>Standard Slab Thicknesses by Application</h3>
+        <ul>
+          <li><strong>Driveways (passenger cars)</strong> — 4 inches minimum; 5 inches for added durability</li>
+          <li><strong>Driveways (heavy vehicles, RVs)</strong> — 5–6 inches minimum</li>
+          <li><strong>Sidewalks and walkways</strong> — 4 inches standard</li>
+          <li><strong>Residential patios</strong> — 3.5 to 4 inches</li>
+          <li><strong>Garage floors</strong> — 4 inches minimum; 5–6 inches recommended for vehicle parking</li>
+          <li><strong>Shed bases</strong> — 3.5 to 4 inches</li>
+        </ul>
+
+        <h3>Concrete Ordering Tips</h3>
+        <p>When placing a ready-mix order, always specify the <strong>PSI strength</strong> (3,000 PSI is standard for most residential slabs), the <strong>slump</strong> (4-inch slump is workable for most pours), and any additives like air entrainment for freeze-thaw climates or fiber reinforcement. Confirm truck access to your site before scheduling the pour.</p>
+        <p>Most ready-mix suppliers have a minimum order of 1 cubic yard and charge a short-load fee for smaller quantities. For jobs under 1 cubic yard, bagged concrete is often the more practical and economical choice.</p>
+
+        <h3>Reinforcement Options</h3>
+        <p>Concrete is strong in compression but cracks under tension. Reinforce slabs based on application:</p>
+        <ul>
+          <li><strong>Rebar (#3 at 18" centers)</strong> — Best for driveways, garage floors, and any slab subject to vehicle loads</li>
+          <li><strong>Welded Wire Mesh (6×6 W1.4)</strong> — Common for residential patios and light-duty slabs</li>
+          <li><strong>Fiber Mesh</strong> — Added directly to the mix; reduces plastic shrinkage cracking; good for patios and walkways</li>
+        </ul>
+        <p>Control joints should be cut or tooled every 8–12 feet in each direction to prevent random cracking as the concrete shrinks during curing.</p>
+      </div>
+
+      <!-- FAQ SECTION -->
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            How many cubic yards of concrete do I need for a 10x10 slab?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              A 10 × 10 foot slab at 4 inches thick requires approximately <strong>1.23 cubic yards</strong> of concrete (10 × 10 × 0.333 ÷ 27 = 1.23 cu yd). Add a 10% overage buffer and order about 1.35 cubic yards. At this volume, bagged concrete is a practical option — you would need about 56 bags of 80 lb concrete or about 74 bags of 60 lb concrete.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            How many 80 lb bags of concrete make a yard?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Each 80 lb bag of pre-mixed concrete yields approximately <strong>0.60 cubic feet</strong>. Since one cubic yard equals 27 cubic feet, you need approximately <strong>45 bags</strong> (27 ÷ 0.60 = 45) of 80 lb concrete to fill one cubic yard. For 60 lb bags (0.45 cu ft each), you need about 60 bags per cubic yard.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            What thickness should a concrete slab be?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The right slab thickness depends on the intended use. <strong>4 inches</strong> is the standard for sidewalks, patios, and residential driveways with normal passenger car traffic. <strong>5–6 inches</strong> is recommended for driveways that will support heavy vehicles, RVs, or trucks. <strong>Garage floors</strong> are typically 4–6 inches depending on load. Always check local building codes, as some jurisdictions have specific requirements for permitted concrete work.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            Can I mix my own concrete for a large slab?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              For slabs requiring more than about <strong>1 cubic yard</strong> (roughly a 10×10 at 4" thick), ordering ready-mix concrete delivered by truck is strongly recommended. Mixing that many bags by hand is extremely labor-intensive, time-consuming, and difficult to finish consistently before the first batches begin to set. Ready-mix also guarantees a uniform, specified-strength mix throughout the pour. Save the bagged concrete for small projects, repairs, and post footings.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            What does concrete PSI mean and which do I need?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <strong>PSI (pounds per square inch)</strong> measures the compressive strength of cured concrete after 28 days. For most residential applications, <strong>3,000 PSI</strong> is the standard specification — suitable for driveways, sidewalks, patios, and garage floors. Use <strong>3,500–4,000 PSI</strong> for slabs that will carry heavy vehicles, for footings, or when the local climate subjects the concrete to frequent freeze-thaw cycles. Higher PSI concrete costs slightly more but provides increased durability and longevity.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RELATED CALCULATORS -->
+      <div class="mt-8">
+        <h3 style="margin-bottom:1rem;">Related Calculators</h3>
+        <div class="grid-3" style="gap:0.75rem;">
+          <a href="sonotube-calculator.html" class="related-calc-link">
+            <span class="icon">&#128296;</span>
+            <span>
+              <div class="name">Sonotube Calculator</div>
+              <div class="cat">Concrete</div>
+            </span>
+            <span class="arrow">&#8594;</span>
+          </a>
+          <a href="../hvac/btu-calculator.html" class="related-calc-link">
+            <span class="icon">&#127777;</span>
+            <span>
+              <div class="name">BTU Calculator</div>
+              <div class="cat">HVAC</div>
+            </span>
+            <span class="arrow">&#8594;</span>
+          </a>
+          <a href="../landscaping/gravel-calculator.html" class="related-calc-link">
+            <span class="icon">&#9898;</span>
+            <span>
+              <div class="name">Gravel Calculator</div>
+              <div class="cat">Landscaping</div>
+            </span>
+            <span class="arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+          <p>Professional trade &amp; contractor calculators for HVAC, construction, landscaping, and more. Free, fast, and accurate.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="../hvac/">HVAC Calculators</a></li>
+            <li><a href="../concrete/">Concrete Calculators</a></li>
+            <li><a href="../landscaping/">Landscaping Calculators</a></li>
+            <li><a href="../flooring/">Flooring Calculators</a></li>
+            <li><a href="../roofing/">Roofing Calculators</a></li>
+            <li><a href="../painting/">Painting Calculators</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <ul>
+            <li><a href="../hvac/btu-calculator.html">BTU Calculator</a></li>
+            <li><a href="../landscaping/gravel-calculator.html">Gravel Calculator</a></li>
+            <li><a href="../concrete/concrete-slab-calculator.html">Concrete Calculator</a></li>
+            <li><a href="../flooring/tile-calculator.html">Tile Calculator</a></li>
+            <li><a href="../painting/paint-coverage-calculator.html">Paint Calculator</a></li>
+            <li><a href="../roofing/roof-pitch-calculator.html">Roof Pitch Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TradeCalc.io — All rights reserved. Free contractor calculators updated for 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>

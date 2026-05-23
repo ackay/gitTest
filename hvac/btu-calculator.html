@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTU Calculator — Room Heating &amp; Cooling BTU Estimator | TradeCalc.io</title>
+  <meta name="description" content="Free BTU calculator for rooms and spaces. Enter room dimensions, insulation quality, and climate zone to calculate exact BTU requirements for heating and cooling. Includes AC tonnage output.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tradecalc.io/hvac/btu-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BTU Calculator — Room Heating &amp; Cooling BTU Estimator | TradeCalc.io">
+  <meta property="og:description" content="Calculate exact BTU requirements for any room. Accounts for room size, ceiling height, insulation quality, and climate zone.">
+  <meta property="og:url" content="https://tradecalc.io/hvac/btu-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TradeCalc.io">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BTU Calculator | TradeCalc.io">
+  <meta name="twitter:description" content="Calculate exact BTU requirements for any room based on size, insulation, and climate.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tradecalc.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HVAC Calculators",
+          "item": "https://tradecalc.io/hvac/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BTU Calculator",
+          "item": "https://tradecalc.io/hvac/btu-calculator.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does BTU stand for and what does it mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BTU stands for British Thermal Unit. It is a unit of heat energy — specifically, the amount of energy required to raise one pound of water by one degree Fahrenheit. In HVAC, BTU per hour (BTU/hr) measures the rate at which a system can add or remove heat. The higher the BTU rating, the more powerful the heating or cooling capacity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many BTUs do I need per square foot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A general rule of thumb is 20–30 BTUs per square foot, depending on your climate. In mild climates, 20 BTU/sq ft is often sufficient. In hot climates, 25–30 BTU/sq ft is more appropriate. However, ceiling height, insulation quality, sun exposure, and the number of occupants all affect the final figure. Always use a proper load calculation for accurate results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What size AC do I need for a 1,000 square foot space?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a 1,000 sq ft space with average insulation in a moderate climate, you typically need about 18,000–24,000 BTUs, which is 1.5 to 2 tons of cooling capacity. In hotter climates or with poor insulation, the requirement can increase to 25,000–30,000 BTUs. Use this calculator with your specific inputs for a more precise estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ceiling height affect BTU requirements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Standard BTU calculations assume an 8-foot ceiling. For every foot above 8 feet, you need approximately 10% more BTUs, because there is more air volume to condition. A room with 10-foot ceilings requires roughly 20% more BTUs than the same floor area with 8-foot ceilings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between cooling BTUs and heating BTUs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cooling BTUs refer to the rate at which a system removes heat from a space (air conditioners and heat pumps in cooling mode). Heating BTUs refer to the rate at which a system adds heat (furnaces, heat pumps in heating mode, boilers). The same space may require different BTU ratings for heating vs. cooling depending on local climate, window area, and insulation. In many cases, heating load and cooling load are calculated separately and may require different equipment sizes."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-container">
+      <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../hvac/" class="nav-link active">HVAC</a>
+        <a href="../concrete/" class="nav-link">Concrete</a>
+        <a href="../landscaping/" class="nav-link">Landscaping</a>
+        <a href="../flooring/" class="nav-link">Flooring</a>
+        <a href="../roofing/" class="nav-link">Roofing</a>
+        <a href="../painting/" class="nav-link">Painting</a>
+        <a href="../hvac/btu-calculator.html" class="nav-link nav-cta">Start Calculating</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--c-white);border-bottom:1px solid var(--c-border)">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../hvac/">HVAC</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>BTU Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="calc-page-hero">
+    <div class="container">
+      <div class="badge badge-blue" style="margin-bottom:0.75rem">HVAC Calculator</div>
+      <h1>BTU Calculator</h1>
+      <p>Calculate the exact BTUs needed to heat or cool any room. Enter your room dimensions, insulation quality, and climate zone to get an accurate BTU estimate and recommended AC tonnage.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR LAYOUT -->
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- LEFT: Form -->
+      <div>
+        <div class="calc-box">
+          <div class="calc-box-header"><h2>Enter Your Measurements</h2></div>
+          <div class="calc-box-body">
+            <form id="btu-form" onsubmit="return false">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="btu-length">Room Length <span class="unit">(ft)</span></label>
+                  <input type="number" id="btu-length" class="form-control" placeholder="e.g. 20" min="1" step="0.5">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="btu-width">Room Width <span class="unit">(ft)</span></label>
+                  <input type="number" id="btu-width" class="form-control" placeholder="e.g. 15" min="1" step="0.5">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="btu-height">Ceiling Height <span class="unit">(ft)</span></label>
+                <input type="number" id="btu-height" class="form-control" placeholder="8" value="8" min="6" max="30" step="0.5">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="btu-insulation">Insulation Quality</label>
+                <select id="btu-insulation" class="form-control">
+                  <option value="poor">Poor — Old home, little insulation, drafty</option>
+                  <option value="average" selected>Average — Standard insulation, typical home</option>
+                  <option value="good">Good — Well-insulated, modern construction</option>
+                  <option value="excellent">Excellent — High-performance, energy-efficient build</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="btu-climate">Climate Zone</label>
+                <select id="btu-climate" class="form-control">
+                  <option value="mild">Mild — Pacific Northwest, coastal California</option>
+                  <option value="moderate" selected>Moderate — Midwest, mid-Atlantic, most of the US</option>
+                  <option value="hot">Hot — Southern US, desert Southwest</option>
+                  <option value="very-hot">Very Hot — Deep South, Phoenix, Las Vegas</option>
+                </select>
+              </div>
+
+              <div style="display:flex;gap:1rem;margin-top:1.5rem">
+                <button type="button" class="btn btn-primary btn-full" onclick="calcBTU()">Calculate</button>
+                <button type="button" class="btn btn-secondary" onclick="resetCalc('btu-form','btu-results')">Reset</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- SEO Content -->
+        <div class="seo-content mt-6">
+          <h2>How to Calculate BTUs for a Room</h2>
+          <p>Properly sizing an HVAC system starts with an accurate BTU calculation. The basic formula combines room area, climate conditions, insulation quality, and ceiling height to estimate the heating or cooling load.</p>
+
+          <h3>The BTU Formula</h3>
+          <p>The simplified calculation used by this tool is:</p>
+          <p><strong>BTUs = Room Area (sq ft) &times; Climate Factor &times; Insulation Factor &times; Ceiling Height Factor</strong></p>
+          <p>The baseline rate is approximately <strong>25 BTU per square foot</strong> for a moderate climate with average insulation and standard 8-foot ceilings. Each factor adjusts that baseline up or down.</p>
+
+          <h3>Climate Zone Factors</h3>
+          <ul>
+            <li><strong>Mild (20 BTU/sq ft)</strong> — Areas like Seattle, San Francisco, or Portland where extreme temperatures are rare.</li>
+            <li><strong>Moderate (25 BTU/sq ft)</strong> — Most of the continental US, including the Midwest and mid-Atlantic states.</li>
+            <li><strong>Hot (30 BTU/sq ft)</strong> — Southern states, Texas, and the desert Southwest like Arizona and Nevada.</li>
+            <li><strong>Very Hot (30+ BTU/sq ft with modifier)</strong> — Deep South, Miami, and areas with extreme heat and humidity.</li>
+          </ul>
+
+          <h3>Insulation Quality Ratings</h3>
+          <ul>
+            <li><strong>Poor (1.25x multiplier)</strong> — Older homes with minimal insulation, single-pane windows, and visible air gaps. BTU needs increase by ~25%.</li>
+            <li><strong>Average (1.0x)</strong> — Typical residential insulation meeting minimum code requirements.</li>
+            <li><strong>Good (0.85x)</strong> — Modern construction with above-code insulation, double-pane windows. Reduces BTU needs by ~15%.</li>
+            <li><strong>Excellent (0.75x)</strong> — High-performance homes with spray foam insulation, triple-pane windows, and air sealing. Reduces needs by ~25%.</li>
+          </ul>
+
+          <h3>Ceiling Height Adjustment</h3>
+          <p>BTU calculations assume a standard 8-foot ceiling. For every foot above 8 feet, add approximately 10% to the base BTU figure. A 10-foot ceiling requires ~20% more BTUs; a 12-foot ceiling requires ~40% more, because there is a greater volume of air to condition.</p>
+
+          <h3>Understanding Tons of Cooling</h3>
+          <p><strong>1 ton of cooling = 12,000 BTU/hr.</strong> This standard makes it easy to compare equipment sizes. Residential central air conditioners are typically sold in half-ton increments from 1.5 to 5 tons. This calculator outputs both the exact tonnage and the recommended unit size rounded to the nearest half ton — which is how equipment is sold.</p>
+
+          <h3>Beyond This Calculator</h3>
+          <p>This tool provides an excellent starting estimate for most residential and light commercial applications. For permitted work, new construction, or complex buildings, a full <strong>Manual J load calculation</strong> is required by ACCA standards and most building codes. Manual J accounts for window area and orientation, local weather data, infiltration rates, internal heat gains, and more.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What does BTU stand for and what does it mean?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                BTU stands for <strong>British Thermal Unit</strong>. It is the amount of energy required to raise one pound of water by one degree Fahrenheit. In HVAC, BTU per hour (BTU/hr) measures the rate at which a system can add or remove heat. The higher the BTU rating, the more powerful the heating or cooling output. A 12,000 BTU/hr air conditioner removes 12,000 BTUs of heat from a room every hour.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How many BTUs do I need per square foot?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                A general starting point is <strong>20–30 BTUs per square foot</strong>, depending on climate. In mild climates, 20 BTU/sq ft is often sufficient. In moderate climates, 25 BTU/sq ft is the standard baseline. In hot or very hot climates, 28–33+ BTU/sq ft may be required. Ceiling height, insulation quality, sun exposure, and window area all adjust the final number. Use this calculator with your specific inputs for a more precise estimate.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What size AC do I need for a 1,000 square foot space?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                For a 1,000 sq ft space with average insulation in a moderate climate, you typically need about <strong>18,000–25,000 BTUs (1.5 to 2 tons)</strong> of cooling capacity. In hotter climates or with poor insulation, the requirement can increase to 28,000–30,000 BTUs. For the most accurate answer, enter your exact room dimensions, insulation quality, and local climate zone into the calculator above.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Does ceiling height affect BTU requirements?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, significantly. BTU calculations are based on the <strong>volume of air</strong> in a room, not just the floor area. The standard calculation assumes 8-foot ceilings. For each additional foot of ceiling height above 8 feet, you need roughly <strong>10% more BTUs</strong>. A room with 10-foot ceilings requires about 20% more BTUs than the same room with 8-foot ceilings. Vaulted ceilings, great rooms, and open-plan spaces often have much higher BTU demands than their floor area alone would suggest.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the difference between cooling BTUs and heating BTUs?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <strong>Cooling BTUs</strong> measure the rate at which an air conditioner or heat pump (in cooling mode) removes heat from a space. <strong>Heating BTUs</strong> measure how quickly a furnace, boiler, or heat pump (in heating mode) adds heat. The same space may need different BTU ratings for heating vs. cooling — in cold climates, the heating load often exceeds the cooling load, while in hot climates, the reverse is true. Heat pumps are rated for both modes, but a furnace or boiler only needs a heating BTU calculation. This calculator focuses on the general cooling/heating load; consult a local HVAC professional for a complete Manual J to cover both modes precisely.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: Results -->
+      <div>
+        <div class="results-box" id="btu-results">
+          <div class="results-box-header"><h2>Results</h2></div>
+          <div class="results-box-body">
+            <div class="results-empty">
+              <div class="results-empty-icon">&#129518;</div>
+              <p>Enter your measurements and click Calculate to see results.</p>
+            </div>
+            <div class="results-data" style="display:none">
+              <div class="result-highlight">
+                <div class="result-label">Recommended BTUs</div>
+                <div class="result-value"><span id="res-btu">—</span> <span class="result-unit">BTU/hr</span></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Exact Tonnage</div>
+                <div class="result-value"><span id="res-tonnage">—</span> <span class="result-unit">tons</span></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Recommended Unit Size</div>
+                <div class="result-value"><span id="res-tonnage-rec">—</span> <span class="result-unit">tons</span></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Room Area</div>
+                <div class="result-value"><span id="res-area">—</span> <span class="result-unit">sq ft</span></div>
+              </div>
+              <div class="result-note" id="res-btu-note" style="margin-top:1rem;font-size:var(--text-xs);color:var(--c-text-muted)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div style="margin-top:1.5rem">
+          <h3 style="font-size:var(--text-lg);margin-bottom:1rem">Related Calculators</h3>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <a href="ac-tonnage-calculator.html" class="related-calc-link">
+              <div class="icon">&#10052;</div>
+              <div>
+                <div class="name">AC Tonnage Calculator</div>
+                <div class="cat">HVAC</div>
+              </div>
+              <span class="arrow">&#8250;</span>
+            </a>
+            <a href="cfm-calculator.html" class="related-calc-link">
+              <div class="icon">&#128168;</div>
+              <div>
+                <div class="name">CFM Calculator</div>
+                <div class="cat">HVAC</div>
+              </div>
+              <span class="arrow">&#8250;</span>
+            </a>
+            <a href="../concrete/concrete-slab-calculator.html" class="related-calc-link">
+              <div class="icon">&#127959;</div>
+              <div>
+                <div class="name">Concrete Slab Calculator</div>
+                <div class="cat">Concrete</div>
+              </div>
+              <span class="arrow">&#8250;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+          <p>Professional trade &amp; contractor calculators for HVAC, construction, landscaping, and more. Free, fast, and accurate.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="../hvac/">HVAC Calculators</a></li>
+            <li><a href="../concrete/">Concrete Calculators</a></li>
+            <li><a href="../landscaping/">Landscaping Calculators</a></li>
+            <li><a href="../flooring/">Flooring Calculators</a></li>
+            <li><a href="../roofing/">Roofing Calculators</a></li>
+            <li><a href="../painting/">Painting Calculators</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <ul>
+            <li><a href="../hvac/btu-calculator.html">BTU Calculator</a></li>
+            <li><a href="../landscaping/gravel-calculator.html">Gravel Calculator</a></li>
+            <li><a href="../concrete/concrete-slab-calculator.html">Concrete Calculator</a></li>
+            <li><a href="../flooring/tile-calculator.html">Tile Calculator</a></li>
+            <li><a href="../painting/paint-coverage-calculator.html">Paint Calculator</a></li>
+            <li><a href="../roofing/roof-pitch-calculator.html">Roof Pitch Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TradeCalc.io — All rights reserved. Free contractor calculators updated for 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>
