@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roof Pitch Calculator — Rise, Run &amp; Angle | TradeCalc.io</title>
+  <meta name="description" content="Calculate roof pitch, angle in degrees, and slope multiplier. Enter rise and run to get instant roof pitch results. Free roofing calculator.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tradecalc.io/roofing/roof-pitch-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Roof Pitch Calculator — Rise, Run &amp; Angle | TradeCalc.io">
+  <meta property="og:description" content="Calculate roof pitch, angle in degrees, and slope multiplier. Enter rise and run to get instant roof pitch results.">
+  <meta property="og:url" content="https://tradecalc.io/roofing/roof-pitch-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TradeCalc.io">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Roof Pitch Calculator — Rise, Run &amp; Angle">
+  <meta name="twitter:description" content="Calculate roof pitch, angle in degrees, and slope multiplier from rise and run values.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Roof Pitch Calculator — Rise, Run &amp; Angle",
+        "description": "Calculate roof pitch, angle in degrees, slope multiplier, and slope category from rise and run measurements.",
+        "url": "https://tradecalc.io/roofing/roof-pitch-calculator.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "TradeCalc.io",
+          "url": "https://tradecalc.io"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tradecalc.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Roofing", "item": "https://tradecalc.io/roofing/" },
+            { "@type": "ListItem", "position": 3, "name": "Roof Pitch Calculator", "item": "https://tradecalc.io/roofing/roof-pitch-calculator.html" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is roof pitch and how is it measured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Roof pitch is the measure of a roof's steepness, expressed as a ratio of vertical rise to horizontal run — typically written as X:12. For every 12 inches of horizontal run, the roof rises X inches. For example, a 4:12 pitch rises 4 inches for every 12 inches of run. Pitch is measured from the attic or using a speed square and level on the roof surface. It can also be converted to an angle in degrees using the arctangent formula: angle = arctan(rise/run)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the most common roof pitch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common roof pitches in residential construction are 4:12 to 6:12. A 4:12 pitch (18.4°) is popular in areas prone to high winds or heavy snow because it provides good drainage without excessive wind resistance. A 6:12 pitch (26.6°) is considered a moderate slope and is common in traditional and craftsman-style homes. Both pitches are compatible with asphalt shingles, the most popular residential roofing material."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I walk on a steep roof?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Walking on a steep roof (7:12 and above) requires professional safety equipment including roof jacks, safety harnesses, and non-slip footwear. At 7:12 (30°), most people can walk on a dry roof with care. At 9:12 (37°) and above, the risk of slipping increases significantly and roof jacks or brackets are strongly recommended. Above 12:12 (45°), OSHA and most safety standards require a personal fall arrest system. Never walk on a wet, icy, or moss-covered roof regardless of pitch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does roof pitch affect shingle quantity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Roof pitch affects shingle quantity because a steeper roof has more actual surface area than its horizontal footprint. This is accounted for using the slope multiplier — a number derived from the pitch. For a 4:12 pitch, the multiplier is 1.054, so the actual roof surface is 5.4% more than the footprint. For a 12:12 pitch, the multiplier is 1.414, meaning the surface is 41.4% larger. To estimate shingles, multiply the building footprint by the slope multiplier to get actual roof area, then divide by 100 to get roofing squares."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the minimum roof pitch for asphalt shingles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The minimum roof pitch for standard asphalt shingles is 4:12 per most manufacturer warranties and building codes. With double underlayment and self-adhering ice and water shield, some manufacturers permit installation down to 2:12, but this is a special low-slope application. Below 2:12, asphalt shingles are not suitable, and a flat or low-slope roofing system such as TPO, EPDM, or modified bitumen should be used. Always check the specific manufacturer's guidelines for minimum pitch requirements."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-container">
+      <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../hvac/" class="nav-link">HVAC</a>
+        <a href="../concrete/" class="nav-link">Concrete</a>
+        <a href="../landscaping/" class="nav-link">Landscaping</a>
+        <a href="../flooring/" class="nav-link">Flooring</a>
+        <a href="../roofing/" class="nav-link active">Roofing</a>
+        <a href="../painting/" class="nav-link">Painting</a>
+        <a href="roof-pitch-calculator.html" class="nav-link nav-cta">Start Calculating</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--c-white);border-bottom:1px solid var(--c-border)">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../roofing/">Roofing</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Roof Pitch Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALC HERO -->
+  <section class="calc-page-hero">
+    <div class="container">
+      <h1>Roof Pitch Calculator</h1>
+      <p>Enter your roof's rise and run to instantly calculate pitch ratio, angle in degrees, slope multiplier, and slope category. Essential for material selection and quantity estimation.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR LAYOUT -->
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- FORM -->
+      <div class="calc-box">
+        <div class="calc-box-header">
+          <h2>Enter Rise &amp; Run</h2>
+        </div>
+        <div class="calc-box-body">
+
+          <div class="alert alert-info" style="margin-bottom:1.5rem">
+            Pitch is expressed as rise:run. For example, a 4:12 pitch rises 4 inches for every 12 inches of run. The run is typically 12 inches for standard pitch notation.
+          </div>
+
+          <form id="pitch-form" onsubmit="return false;">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="pitch-rise">Rise <span class="unit">(inches)</span></label>
+                <input type="number" id="pitch-rise" class="form-control" placeholder="e.g. 6" min="0.1" step="0.5">
+                <p class="form-hint">Vertical inches of rise</p>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pitch-run">Run <span class="unit">(inches)</span></label>
+                <input type="number" id="pitch-run" class="form-control" value="12" min="1" step="0.5">
+                <p class="form-hint">Typically 12 inches</p>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;margin-top:0.5rem">
+              <button type="button" class="btn btn-primary btn-full" onclick="calcRoofPitch()">Calculate Pitch</button>
+              <button type="button" class="btn btn-secondary" onclick="resetCalc('pitch-form','pitch-results')" style="white-space:nowrap">Reset</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="results-box" id="pitch-results">
+        <div class="results-box-header">
+          <h2>Pitch Results</h2>
+        </div>
+        <div class="results-box-body">
+
+          <!-- Empty state -->
+          <div class="results-empty">
+            <div class="results-empty-icon">&#127968;</div>
+            <p>Enter the rise and run values above, then click <strong>Calculate Pitch</strong> to see your roof pitch results.</p>
+          </div>
+
+          <!-- Results data -->
+          <div class="results-data" style="display:none">
+
+            <div class="result-highlight">
+              <div class="result-label">Roof Pitch</div>
+              <div class="result-value" id="res-pitch">—</div>
+              <div class="result-unit">rise:run ratio</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Roof Angle</div>
+              <div class="result-value" id="res-angle">—</div>
+              <div class="result-unit">degrees</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Slope Multiplier</div>
+              <div class="result-value" id="res-multiplier">—</div>
+              <div class="result-unit">multiply footprint area by this</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Slope Category</div>
+              <div class="result-value" id="res-category">—</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Slope as Percentage</div>
+              <div class="result-value" id="res-pitch-percent">—</div>
+              <div class="result-unit">%</div>
+            </div>
+
+            <!-- Pitch Reference Table -->
+            <div style="margin-top:1rem;padding:1rem;background:var(--slate-50);border-radius:var(--radius-md)">
+              <div style="font-size:var(--text-xs);font-weight:700;margin-bottom:0.5rem;color:var(--slate-600)">COMMON PITCH REFERENCE</div>
+              <table style="width:100%;font-size:var(--text-xs);border-collapse:collapse">
+                <tr style="background:var(--slate-100)"><th style="padding:0.4rem;text-align:left">Pitch</th><th style="padding:0.4rem;text-align:left">Angle</th><th style="padding:0.4rem;text-align:left">Category</th></tr>
+                <tr><td style="padding:0.4rem">2:12</td><td style="padding:0.4rem">9.5°</td><td style="padding:0.4rem">Low</td></tr>
+                <tr style="background:var(--slate-50)"><td style="padding:0.4rem">4:12</td><td style="padding:0.4rem">18.4°</td><td style="padding:0.4rem">Standard</td></tr>
+                <tr><td style="padding:0.4rem">6:12</td><td style="padding:0.4rem">26.6°</td><td style="padding:0.4rem">Moderate</td></tr>
+                <tr style="background:var(--slate-50)"><td style="padding:0.4rem">8:12</td><td style="padding:0.4rem">33.7°</td><td style="padding:0.4rem">Steep</td></tr>
+                <tr><td style="padding:0.4rem">12:12</td><td style="padding:0.4rem">45°</td><td style="padding:0.4rem">Very Steep</td></tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="seo-content">
+        <h2>Roof Pitch: What It Means and Why It Matters</h2>
+        <p>Roof pitch is one of the most critical measurements in any roofing project. It determines which materials can legally and practically be used, how quickly water and snow shed from the roof, how safely workers can operate on the surface, and how much material is needed to cover the actual roof area.</p>
+
+        <h3>How Roof Pitch is Measured</h3>
+        <p>Roof pitch is measured as a ratio of vertical rise to horizontal run, expressed as X:12 in the United States. The "12" represents 12 inches of horizontal run — a standardized unit that makes comparing pitches straightforward. To measure an existing roof pitch, you can use a pitch gauge or a standard level and ruler:</p>
+        <ul>
+          <li>Place a 12-inch level horizontally against the roof surface with one end at the ridge</li>
+          <li>Hold the level perfectly level (use the bubble indicator)</li>
+          <li>Measure the vertical distance from the bottom of the level to the roof surface at the 12-inch mark</li>
+          <li>That measurement in inches is your rise — giving you the X:12 pitch</li>
+        </ul>
+        <p>You can also measure from the attic by placing the level against a rafter and measuring the same way. A speed square or digital pitch gauge makes this even faster on the job site.</p>
+
+        <h3>Walkability of Different Pitches</h3>
+        <p>The pitch of a roof directly affects how safely workers can access and work on it. Here's a practical guide:</p>
+        <ul>
+          <li><strong>1:12 to 3:12 (Low slope):</strong> Easily walkable. Workers can typically move without special equipment, though rubber-soled boots are recommended.</li>
+          <li><strong>4:12 to 6:12 (Standard to moderate):</strong> Walkable with care. Good footwear and attention to foot placement are important. In wet conditions, extra caution is needed.</li>
+          <li><strong>7:12 to 9:12 (Steep):</strong> Roof jacks or brackets are strongly recommended. Personal fall protection should be considered.</li>
+          <li><strong>10:12 and above (Very steep):</strong> OSHA standards require personal fall arrest systems. Work is slower and more labor-intensive, increasing installation costs significantly.</li>
+        </ul>
+
+        <h3>Material Compatibility by Pitch</h3>
+        <p>Different roofing materials have minimum pitch requirements set by manufacturers and building codes. Installing materials below their minimum pitch voids warranties and can lead to leakage, blow-offs, and structural damage:</p>
+        <ul>
+          <li><strong>Standard asphalt shingles:</strong> Minimum 4:12 (2:12 with special installation per IBC/IRC)</li>
+          <li><strong>Standing seam metal:</strong> Works from as low as 1:12 — excellent for low slopes</li>
+          <li><strong>Exposed fastener metal / corrugated:</strong> Minimum 3:12 for most products</li>
+          <li><strong>Wood shingles:</strong> Minimum 3:12; wood shakes minimum 4:12</li>
+          <li><strong>Clay and concrete tile:</strong> Minimum 4:12; structural loading must be verified</li>
+          <li><strong>Slate:</strong> Minimum 6:12 for standard; heavy gauges may require engineering</li>
+          <li><strong>TPO, EPDM, BUR:</strong> Designed for flat and low-slope (0:12 to 3:12)</li>
+        </ul>
+
+        <h3>How Pitch Affects Material Quantities</h3>
+        <p>A common mistake in roofing is calculating material quantities based on the building's footprint square footage. The actual roof surface is always larger than the footprint because the roof is sloped. The <strong>slope multiplier</strong> (also called the pitch factor) converts footprint area to true roof surface area.</p>
+        <p>The slope multiplier is calculated as: <strong>√(rise² + run²) ÷ run</strong>. For a 6:12 pitch: √(36 + 144) ÷ 12 = √180 ÷ 12 = 13.42 ÷ 12 = 1.118. Multiply your footprint area by 1.118 to get the true roof surface area for a 6:12 roof.</p>
+        <ul>
+          <li><strong>2:12:</strong> Multiplier 1.014 — nearly the same as footprint</li>
+          <li><strong>4:12:</strong> Multiplier 1.054 — 5.4% more area than footprint</li>
+          <li><strong>6:12:</strong> Multiplier 1.118 — 11.8% more area than footprint</li>
+          <li><strong>8:12:</strong> Multiplier 1.202 — 20.2% more area than footprint</li>
+          <li><strong>10:12:</strong> Multiplier 1.302 — 30.2% more area than footprint</li>
+          <li><strong>12:12:</strong> Multiplier 1.414 — 41.4% more area than footprint</li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-section">
+        <h2>Roof Pitch Calculator — Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            What is roof pitch and how is it measured?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Roof pitch is the measure of a roof's steepness, expressed as a ratio of vertical rise to horizontal run — typically written as X:12. For every 12 inches of horizontal run, the roof rises X inches. For example, a 4:12 pitch rises 4 inches for every 12 inches of run. To measure an existing roof, use a 12-inch level placed horizontally against the roof surface and measure the vertical distance at the 12-inch mark. You can also use a digital pitch gauge or a speed square with a pitch scale for quick field measurements.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            What is the most common roof pitch?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The most common residential roof pitches in the United States are 4:12 to 6:12. A 4:12 pitch (approximately 18°) provides good drainage without excessive steepness, making it popular in regions with moderate snowfall and wind. A 6:12 pitch (approximately 27°) is common in traditional and craftsman architectural styles. Both pitches are fully compatible with asphalt shingles and most other roofing materials. In areas with heavy snowfall, steeper pitches of 6:12 to 8:12 are preferred to shed snow more effectively.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Can I walk on a steep roof?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The ability to safely walk on a roof depends on the pitch, surface condition, and footwear. On a dry roof up to 6:12, most people can walk with non-slip footwear and care. At 7:12 to 9:12, professional roof jacks (temporary platforms secured to the roof) are strongly recommended. At 10:12 and above, OSHA requires personal fall arrest systems for any worker. Never walk on a wet, icy, or moss-covered roof regardless of pitch — moss and algae make even low-slope roofs extremely slippery.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            How does roof pitch affect shingle quantity?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Roof pitch affects shingle quantity because a steeper roof has more surface area than its horizontal footprint. This is accounted for with the slope multiplier — a calculated value based on the pitch. For a 4:12 pitch, the multiplier is about 1.054 (5.4% more material than the footprint). For a 12:12 pitch, it's 1.414 (41.4% more). To estimate shingles needed, multiply your building footprint area by the slope multiplier to get actual roof square footage, then divide by 100 to get roofing squares (one square = 100 sq ft = 3 bundles of standard shingles).
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            What is the minimum roof pitch for asphalt shingles?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The minimum roof pitch for standard asphalt shingles is 4:12 per most manufacturer warranties and the International Residential Code (IRC). With a special low-slope installation method — using double underlayment and ice and water shield across the entire deck — many manufacturers allow installation down to 2:12. Below 2:12, asphalt shingles are not suitable for any installation and a dedicated flat or low-slope system (EPDM, TPO, modified bitumen, or BUR) must be used. Always verify minimum slope requirements with your specific shingle manufacturer's installation instructions.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED CALCULATORS -->
+  <section class="section-sm" style="background:var(--c-bg)">
+    <div class="container">
+      <h3 style="margin-bottom:1rem;font-size:var(--text-lg)">Related Calculators</h3>
+      <div class="grid-2" style="max-width:600px">
+        <a href="../flooring/tile-calculator.html" class="related-calc-link">
+          <div class="icon">&#129695;</div>
+          <div>
+            <div class="name">Tile Calculator</div>
+            <div class="cat">Flooring</div>
+          </div>
+          <span class="arrow">&#8594;</span>
+        </a>
+        <a href="../concrete/concrete-slab-calculator.html" class="related-calc-link">
+          <div class="icon">&#129521;</div>
+          <div>
+            <div class="name">Concrete Slab Calculator</div>
+            <div class="cat">Concrete</div>
+          </div>
+          <span class="arrow">&#8594;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+          <p>Professional trade &amp; contractor calculators for HVAC, construction, landscaping, and more. Free, fast, and accurate.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="../hvac/">HVAC Calculators</a></li>
+            <li><a href="../concrete/">Concrete Calculators</a></li>
+            <li><a href="../landscaping/">Landscaping Calculators</a></li>
+            <li><a href="../flooring/">Flooring Calculators</a></li>
+            <li><a href="../roofing/">Roofing Calculators</a></li>
+            <li><a href="../painting/">Painting Calculators</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <ul>
+            <li><a href="../hvac/btu-calculator.html">BTU Calculator</a></li>
+            <li><a href="../landscaping/gravel-calculator.html">Gravel Calculator</a></li>
+            <li><a href="../concrete/concrete-slab-calculator.html">Concrete Calculator</a></li>
+            <li><a href="../flooring/tile-calculator.html">Tile Calculator</a></li>
+            <li><a href="../painting/paint-coverage-calculator.html">Paint Calculator</a></li>
+            <li><a href="../roofing/roof-pitch-calculator.html">Roof Pitch Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TradeCalc.io — All rights reserved. Free contractor calculators updated for 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>

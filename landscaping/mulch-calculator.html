@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulch Calculator — Bags &amp; Cubic Yards | TradeCalc.io</title>
+  <meta name="description" content="Calculate how many cubic yards of mulch and how many bags you need for garden beds and landscaping. Free mulch calculator for homeowners and contractors.">
+  <meta name="keywords" content="mulch calculator, how much mulch do I need, cubic yards mulch, mulch bags calculator, garden mulch estimator, landscape mulch calculator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tradecalc.io/landscaping/mulch-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mulch Calculator — Bags &amp; Cubic Yards | TradeCalc.io">
+  <meta property="og:description" content="Calculate how many cubic yards of mulch and how many bags you need for garden beds and landscaping. Free mulch calculator for homeowners and contractors.">
+  <meta property="og:url" content="https://tradecalc.io/landscaping/mulch-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TradeCalc.io">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mulch Calculator — Bags &amp; Cubic Yards | TradeCalc.io">
+  <meta name="twitter:description" content="Instantly calculate how many cubic yards of mulch and how many 2 or 3 cu ft bags you need for your garden beds. Free and accurate.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tradecalc.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Landscaping", "item": "https://tradecalc.io/landscaping/" },
+          { "@type": "ListItem", "position": 3, "name": "Mulch Calculator", "item": "https://tradecalc.io/landscaping/mulch-calculator.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much mulch do I need for my garden beds?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Calculate the area of your garden bed in square feet (length × width), then multiply by the desired depth in feet. Divide by 27 to get cubic yards. For example, a 10×20 foot bed at 3 inches deep: 10 × 20 × 0.25 ÷ 27 = 1.85 cubic yards. Use this calculator for instant results — just enter your dimensions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How deep should mulch be?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The ideal mulch depth for most garden beds is 2 to 4 inches, with 3 inches being the recommended standard. At 3 inches, mulch effectively suppresses weeds and retains soil moisture without causing issues. Less than 2 inches is often insufficient for weed control. More than 4 inches can prevent water from reaching plant roots and promote fungal disease. For tree rings, apply 3–4 inches of mulch but keep it 6 inches away from the trunk to prevent rot."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many bags of mulch equal a cubic yard?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One cubic yard equals 27 cubic feet. If using 2 cubic foot bags, you need 13.5 bags (27 ÷ 2) per cubic yard — so 14 bags rounded up. If using 3 cubic foot bags, you need 9 bags (27 ÷ 3) per cubic yard. Bulk delivery by the yard is typically more economical for areas requiring 2 or more cubic yards."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What type of mulch is best?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The best mulch depends on your application. Shredded bark mulch (cedar or pine) is the most popular choice — it looks attractive, resists blowing, and breaks down slowly. Wood chip mulch is excellent for tree rings and naturalistic areas. Double-shredded hardwood mulch is ideal for garden beds as it breaks down into the soil improving it over time. Rubber mulch lasts the longest but doesn't enrich the soil. Pine straw works well in acidic-soil beds and slopes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should you replace mulch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most organic mulches (wood chip, bark, pine straw) should be refreshed once a year to maintain the recommended 2–3 inch depth. Rather than removing old mulch, simply top-dress with 1–2 inches of fresh mulch annually to restore the depth as the old material decomposes. Rubber mulch lasts 10+ years without replacement but does not provide the soil-enrichment benefits of organic mulch. Check mulch depth each spring and refresh as needed before the growing season."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-container">
+      <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../hvac/" class="nav-link">HVAC</a>
+        <a href="../concrete/" class="nav-link">Concrete</a>
+        <a href="../landscaping/" class="nav-link active">Landscaping</a>
+        <a href="../flooring/" class="nav-link">Flooring</a>
+        <a href="../roofing/" class="nav-link">Roofing</a>
+        <a href="../painting/" class="nav-link">Painting</a>
+        <a href="../hvac/btu-calculator.html" class="nav-link nav-cta">Start Calculating</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--c-white);border-bottom:1px solid var(--c-border)">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../landscaping/">Landscaping</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Mulch Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="calc-page-hero">
+    <div class="container">
+      <h1>Mulch Calculator</h1>
+      <p>Calculate exactly how many cubic yards of mulch and how many bags you need for your garden beds, tree rings, and landscaping areas. Get results for both 2 cu ft and 3 cu ft bags instantly.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR LAYOUT -->
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- CALC BOX -->
+      <div class="calc-box">
+        <div class="calc-box-header">
+          <h2>Mulch Area &amp; Depth</h2>
+        </div>
+        <div class="calc-box-body">
+          <form id="mulch-form" onsubmit="return false;">
+
+            <div class="form-group">
+              <label class="form-label" for="mulch-length">Area Length <span class="unit">(feet)</span></label>
+              <input type="number" id="mulch-length" class="form-control" placeholder="e.g. 20" min="0.1" step="0.01">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="mulch-width">Area Width <span class="unit">(feet)</span></label>
+              <input type="number" id="mulch-width" class="form-control" placeholder="e.g. 10" min="0.1" step="0.01">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="mulch-depth">Mulch Depth <span class="unit">(inches)</span></label>
+              <input type="number" id="mulch-depth" class="form-control" placeholder="e.g. 3" min="0.5" step="0.5" value="3">
+              <p class="form-hint">Recommended depth: 2–4 inches (3" is ideal for weed control and moisture retention)</p>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-full" onclick="calcMulch()">Calculate Mulch</button>
+            <button type="button" class="btn btn-secondary btn-full" style="margin-top:0.75rem;" onclick="resetCalc('mulch-form','mulch-results')">Reset</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- RESULTS BOX -->
+      <div class="results-box" id="mulch-results">
+        <div class="results-box-header">
+          <h2>Mulch Estimate</h2>
+        </div>
+        <div class="results-box-body">
+
+          <!-- Empty state -->
+          <div class="results-empty">
+            <div class="results-empty-icon">&#127807;</div>
+            <p>Enter your area dimensions and mulch depth above, then click <strong>Calculate Mulch</strong> to see your estimate.</p>
+          </div>
+
+          <!-- Results data (hidden until calculated) -->
+          <div class="results-data" style="display:none;">
+
+            <div class="alert alert-info">Mulch settles 20–25% over the first season — consider ordering 10–15% extra for new installations.</div>
+
+            <div class="result-highlight">
+              <div class="result-label">Cubic Yards Needed</div>
+              <div class="result-value"><span id="res-mulch-cu-yd">—</span></div>
+              <div class="result-unit">cubic yards</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Cubic Feet</div>
+              <div class="result-value" style="font-size:var(--text-xl)"><span id="res-mulch-cu-ft">—</span> <span class="result-unit">cu ft</span></div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">2 cu ft Bags Needed</div>
+              <div class="result-value" style="font-size:var(--text-xl)"><span id="res-mulch-bags2">—</span> <span class="result-unit">bags</span></div>
+              <div class="result-note">Standard bag size at most home centers</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">3 cu ft Bags Needed</div>
+              <div class="result-value" style="font-size:var(--text-xl)"><span id="res-mulch-bags3">—</span> <span class="result-unit">bags</span></div>
+              <div class="result-note">Larger bags — fewer trips to carry</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="seo-content mt-6">
+        <h2>How to Calculate Mulch for Garden Beds</h2>
+        <p>Calculating mulch quantity is one of the most common landscaping tasks homeowners and contractors tackle each spring. The right amount of mulch protects plant roots, suppresses weeds, retains moisture, and improves the look of garden beds. Too little mulch fails to control weeds effectively; too much can suffocate plant roots and promote fungal disease.</p>
+
+        <h3>The Mulch Formula</h3>
+        <p>For any rectangular garden bed or landscaped area:</p>
+        <p><strong>Cubic Yards = (Length × Width × Depth in feet) ÷ 27</strong></p>
+        <p>Since mulch depth is commonly measured in inches, convert to feet by dividing by 12. A 3-inch depth = 3 ÷ 12 = 0.25 feet. For irregular shapes, break them into rectangles, calculate each section, and add them together.</p>
+
+        <h3>Worked Example: Mulching a 15×30 Foot Garden Bed</h3>
+        <ul>
+          <li>Area: 15 × 30 = 450 square feet</li>
+          <li>Depth: 3 inches = 0.25 feet</li>
+          <li>Cubic feet: 450 × 0.25 = 112.5 cu ft</li>
+          <li>Cubic yards: 112.5 ÷ 27 = 4.17 cu yd — order 4.5 cu yd</li>
+          <li>2 cu ft bags: 112.5 ÷ 2 = 57 bags</li>
+          <li>3 cu ft bags: 112.5 ÷ 3 = 38 bags</li>
+        </ul>
+        <p>At this volume, bulk delivery is far more economical than purchasing bags.</p>
+
+        <h3>Types of Mulch and Their Benefits</h3>
+        <ul>
+          <li><strong>Shredded Bark Mulch (Cedar or Pine)</strong> — The most popular residential mulch. Attractive reddish-brown color, resists blowing, decomposes slowly, and repels some insects. Ideal for general garden beds and borders.</li>
+          <li><strong>Double-Shredded Hardwood Mulch</strong> — Breaks down into the soil, improving texture and adding organic matter. Excellent for vegetable garden paths and perennial beds. May need annual refreshing.</li>
+          <li><strong>Wood Chip Mulch</strong> — Larger chips from tree trimming. Excellent for tree rings and naturalistic woodland gardens. Breaks down slowly and is often available free from tree services.</li>
+          <li><strong>Pine Straw</strong> — Lightweight, inexpensive, and acidic. Ideal for azaleas, rhododendrons, blueberries, and other acid-loving plants. Common in the Southeast US. Needs annual replacement.</li>
+          <li><strong>Rubber Mulch</strong> — Made from recycled tires. Extremely durable (10+ year lifespan), doesn't decompose, and is excellent for playgrounds. Does not improve soil or provide biological benefits.</li>
+          <li><strong>Straw Mulch</strong> — Used primarily for erosion control on slopes and for vegetable garden paths. Should not be confused with hay, which contains seeds.</li>
+          <li><strong>Cocoa Hull Mulch</strong> — Attractive dark color with a chocolate smell. Decomposes into the soil. Caution: toxic to dogs.</li>
+        </ul>
+
+        <h3>Ideal Mulch Depth by Application</h3>
+        <ul>
+          <li><strong>Annual and perennial garden beds</strong> — 2–3 inches; keep mulch away from plant stems to prevent crown rot</li>
+          <li><strong>Tree rings</strong> — 3–4 inches; extend at least to the dripline; keep 6 inches away from trunk to prevent "volcano mulching"</li>
+          <li><strong>Shrub beds</strong> — 3 inches around established shrubs; 2 inches around newly planted shrubs</li>
+          <li><strong>Vegetable garden paths</strong> — 3–4 inches of wood chips or straw for weed suppression and all-weather walking surface</li>
+          <li><strong>Slopes for erosion control</strong> — 3–4 inches of shredded bark or straw; secure with erosion netting on steep slopes</li>
+          <li><strong>Playgrounds</strong> — 6–9 inches of rubber mulch or engineered wood fiber to meet ASTM fall protection standards</li>
+        </ul>
+
+        <h3>Weed Control: Getting the Most from Your Mulch</h3>
+        <p>Mulch controls weeds in two ways: by physically blocking light from reaching weed seeds, and by creating a barrier between the soil surface and weed seeds carried by wind. To maximize weed suppression:</p>
+        <ul>
+          <li>Remove existing weeds before mulching — mulch does not kill established weeds</li>
+          <li>Apply a minimum of 3 inches; 2 inches is often insufficient for weed control</li>
+          <li>Consider laying <strong>woven landscape fabric</strong> underneath for problem areas, though fabric can become difficult to remove and may impede the soil benefits of decomposing organic mulch</li>
+          <li>Top-dress annually rather than letting mulch thin to less than 2 inches</li>
+        </ul>
+
+        <h3>Moisture Retention Benefits</h3>
+        <p>A proper mulch layer reduces evaporation from the soil surface by <strong>25–50%</strong>, significantly reducing irrigation requirements during dry periods. This benefit is most pronounced in summer heat and in sandy, fast-draining soils. Organic mulches also moderate soil temperature — keeping roots cooler in summer and warmer in winter — reducing plant stress and extending the growing season at both ends.</p>
+
+        <h3>When to Apply and How Often to Replace Mulch</h3>
+        <p>The best time to apply or refresh mulch is <strong>early spring</strong> after the soil has warmed but before weeds germinate. A fall application is also beneficial for winter protection of perennial roots. Organic mulches should be refreshed annually by top-dressing with 1–2 inches of fresh mulch on top of the existing layer — full removal is rarely necessary unless the old mulch has become compacted or contaminated.</p>
+      </div>
+
+      <!-- FAQ SECTION -->
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            How much mulch do I need for my garden beds?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Use the formula: <strong>Cubic Yards = (Length × Width × Depth in feet) ÷ 27</strong>. For example, a 10 × 20 foot bed at 3 inches deep: 10 × 20 × 0.25 ÷ 27 = <strong>1.85 cubic yards</strong>, which rounds up to 2 cubic yards. In 2 cu ft bags, that's about 27 bags; in 3 cu ft bags, about 18 bags. Use this calculator for instant, accurate results for any bed size and depth.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            How deep should mulch be?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The ideal depth is <strong>2–4 inches</strong>, with <strong>3 inches being the widely recommended standard</strong> for garden beds. At 3 inches, mulch effectively suppresses weeds and retains soil moisture. Less than 2 inches provides inadequate weed control. More than 4 inches can prevent water from penetrating to roots, create anaerobic conditions in the soil, and promote crown rot in perennials and shrubs. For tree rings, use 3–4 inches but always keep mulch 6 inches away from the trunk.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            How many bags of mulch equal a cubic yard?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              One cubic yard equals 27 cubic feet. Since the most common bag sizes are 2 cu ft and 3 cu ft: <strong>2 cu ft bags: 13.5 bags per cubic yard</strong> (order 14 bags to be safe). <strong>3 cu ft bags: 9 bags per cubic yard</strong>. For projects requiring 2+ cubic yards, bulk delivery is typically 30–50% less expensive per cubic yard than buying bags, especially when you factor in the time saved loading and unloading bags.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            What type of mulch is best?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The best mulch depends on your goals. For <strong>appearance and longevity</strong>: shredded bark mulch (cedar or pine) is the most popular, with an attractive color that lasts 2–3 years. For <strong>soil improvement</strong>: double-shredded hardwood mulch decomposes into the soil, enriching it with organic matter. For <strong>acid-loving plants</strong>: pine straw or pine bark. For <strong>low maintenance</strong>: rubber mulch lasts 10+ years but provides no soil benefits. For <strong>playgrounds</strong>: rubber mulch or engineered wood fiber. Avoid dyed mulch with artificial colorants near vegetable gardens.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            How often should you replace mulch?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Most organic mulches should be <strong>refreshed annually in spring</strong>. Rather than removing old mulch, simply top-dress with 1–2 inches of fresh mulch to restore the total depth to 3 inches. This adds organic matter as the old mulch continues to decompose. Inspect mulch depth every spring — if it has compacted to less than 2 inches, it is time to top-dress. Pine straw breaks down faster and may need refreshing in both spring and fall. Rubber mulch does not need replacement for 10+ years but should be raked and checked for debris.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RELATED CALCULATORS -->
+      <div class="mt-8">
+        <h3 style="margin-bottom:1rem;">Related Calculators</h3>
+        <div class="grid-3" style="gap:0.75rem;">
+          <a href="gravel-calculator.html" class="related-calc-link">
+            <span class="icon">&#9898;</span>
+            <span>
+              <div class="name">Gravel Calculator</div>
+              <div class="cat">Landscaping</div>
+            </span>
+            <span class="arrow">&#8594;</span>
+          </a>
+          <a href="../concrete/concrete-slab-calculator.html" class="related-calc-link">
+            <span class="icon">&#129521;</span>
+            <span>
+              <div class="name">Concrete Slab Calculator</div>
+              <div class="cat">Concrete</div>
+            </span>
+            <span class="arrow">&#8594;</span>
+          </a>
+          <a href="../painting/paint-coverage-calculator.html" class="related-calc-link">
+            <span class="icon">&#127912;</span>
+            <span>
+              <div class="name">Paint Coverage Calculator</div>
+              <div class="cat">Painting</div>
+            </span>
+            <span class="arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+          <p>Professional trade &amp; contractor calculators for HVAC, construction, landscaping, and more. Free, fast, and accurate.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="../hvac/">HVAC Calculators</a></li>
+            <li><a href="../concrete/">Concrete Calculators</a></li>
+            <li><a href="../landscaping/">Landscaping Calculators</a></li>
+            <li><a href="../flooring/">Flooring Calculators</a></li>
+            <li><a href="../roofing/">Roofing Calculators</a></li>
+            <li><a href="../painting/">Painting Calculators</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <ul>
+            <li><a href="../hvac/btu-calculator.html">BTU Calculator</a></li>
+            <li><a href="../landscaping/gravel-calculator.html">Gravel Calculator</a></li>
+            <li><a href="../concrete/concrete-slab-calculator.html">Concrete Calculator</a></li>
+            <li><a href="../flooring/tile-calculator.html">Tile Calculator</a></li>
+            <li><a href="../painting/paint-coverage-calculator.html">Paint Calculator</a></li>
+            <li><a href="../roofing/roof-pitch-calculator.html">Roof Pitch Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TradeCalc.io — All rights reserved. Free contractor calculators updated for 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>
