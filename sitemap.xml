@@ -1,121 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tradecalc.io/</loc>
+    <loc>https://tradecalc.net/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- HVAC -->
   <url>
-    <loc>https://tradecalc.io/hvac/</loc>
+    <loc>https://tradecalc.net/hvac/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/hvac/btu-calculator.html</loc>
+    <loc>https://tradecalc.net/hvac/btu-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/hvac/ac-tonnage-calculator.html</loc>
+    <loc>https://tradecalc.net/hvac/ac-tonnage-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/hvac/cfm-calculator.html</loc>
+    <loc>https://tradecalc.net/hvac/cfm-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Concrete -->
   <url>
-    <loc>https://tradecalc.io/concrete/</loc>
+    <loc>https://tradecalc.net/concrete/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/concrete/concrete-slab-calculator.html</loc>
+    <loc>https://tradecalc.net/concrete/concrete-slab-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/concrete/sonotube-calculator.html</loc>
+    <loc>https://tradecalc.net/concrete/sonotube-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Landscaping -->
   <url>
-    <loc>https://tradecalc.io/landscaping/</loc>
+    <loc>https://tradecalc.net/landscaping/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/landscaping/gravel-calculator.html</loc>
+    <loc>https://tradecalc.net/landscaping/gravel-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/landscaping/mulch-calculator.html</loc>
+    <loc>https://tradecalc.net/landscaping/mulch-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Flooring -->
   <url>
-    <loc>https://tradecalc.io/flooring/</loc>
+    <loc>https://tradecalc.net/flooring/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/flooring/tile-calculator.html</loc>
+    <loc>https://tradecalc.net/flooring/tile-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/flooring/flooring-waste-calculator.html</loc>
+    <loc>https://tradecalc.net/flooring/flooring-waste-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Roofing -->
   <url>
-    <loc>https://tradecalc.io/roofing/</loc>
+    <loc>https://tradecalc.net/roofing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/roofing/roof-pitch-calculator.html</loc>
+    <loc>https://tradecalc.net/roofing/roof-pitch-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Painting -->
   <url>
-    <loc>https://tradecalc.io/painting/</loc>
+    <loc>https://tradecalc.net/painting/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/painting/paint-coverage-calculator.html</loc>
+    <loc>https://tradecalc.net/painting/paint-coverage-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Utility -->
   <url>
-    <loc>https://tradecalc.io/about.html</loc>
+    <loc>https://tradecalc.net/about.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/privacy.html</loc>
+    <loc>https://tradecalc.net/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tradecalc.io/terms.html</loc>
+    <loc>https://tradecalc.net/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

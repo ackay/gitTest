@@ -1,4 +1,4 @@
-/* TradeCalc.io — Main JS */
+/* tradecalc.net — Main JS */
 (function () {
   'use strict';
 

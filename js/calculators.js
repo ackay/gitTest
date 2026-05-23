@@ -1,4 +1,4 @@
-/* TradeCalc.io — Calculator Logic */
+/* tradecalc.net — Calculator Logic */
 (function () {
   'use strict';
 
