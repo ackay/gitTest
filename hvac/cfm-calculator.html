@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFM Calculator — HVAC Airflow &amp; Ventilation Calculator | TradeCalc.io</title>
+  <meta name="description" content="Free CFM calculator for HVAC contractors and homeowners. Calculate cubic feet per minute of airflow required for any room based on dimensions and air changes per hour (ACH). Size ducts and air handlers accurately.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tradecalc.io/hvac/cfm-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CFM Calculator — HVAC Airflow &amp; Ventilation Calculator | TradeCalc.io">
+  <meta property="og:description" content="Calculate CFM airflow requirements for any room. Set room dimensions and air changes per hour to size ducts, fans, and air handlers correctly.">
+  <meta property="og:url" content="https://tradecalc.io/hvac/cfm-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TradeCalc.io">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CFM Calculator | TradeCalc.io">
+  <meta name="twitter:description" content="Calculate HVAC airflow (CFM) requirements for proper ventilation in any room or space.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tradecalc.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HVAC Calculators",
+          "item": "https://tradecalc.io/hvac/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CFM Calculator",
+          "item": "https://tradecalc.io/hvac/cfm-calculator.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is CFM in HVAC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CFM stands for Cubic Feet per Minute. In HVAC, it measures the volume of air flowing through a duct, fan, air handler, or room ventilation system per minute. CFM is the fundamental measurement used to size ductwork, select fans and blowers, specify air handlers, and ensure adequate ventilation and air quality in a space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate CFM for a room?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard formula is: CFM = (Room Volume in cubic feet × Air Changes Per Hour) ÷ 60. Room volume equals length × width × ceiling height. For example, a 20 × 15 × 8 foot room has a volume of 2,400 cubic feet. At 6 air changes per hour, CFM = (2,400 × 6) ÷ 60 = 240 CFM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is ACH (air changes per hour)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ACH (Air Changes Per Hour) is the number of times the entire volume of air in a room is replaced within one hour. Higher ACH means fresher air, better odor control, and improved indoor air quality — but requires a larger, more powerful HVAC or ventilation system. Typical ACH values are: bedrooms 4–6, living rooms 6–8, kitchens 7–8, bathrooms 6–8, offices 6–8, and server rooms 15–30."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many CFM do I need per square foot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no single CFM-per-square-foot standard because ceiling height and air changes per hour requirements vary by room type. As a rough residential guideline, plan for 1 CFM per square foot in living areas. For kitchens and bathrooms, the HVI (Home Ventilating Institute) recommends calculating by volume and ACH rather than square footage alone. ASHRAE Standard 62.2 provides the authoritative residential ventilation requirements used by HVAC professionals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does CFM affect indoor air quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CFM directly determines how quickly stale air is replaced with fresh, conditioned air. Insufficient CFM leads to stagnant air, elevated CO2 levels, humidity buildup, odors, and increased concentrations of indoor pollutants (VOCs, allergens, mold spores). Adequate CFM — matched to the room's ACH requirements — maintains comfortable humidity levels, removes contaminants efficiently, and ensures the HVAC system distributes conditioned air evenly throughout the space."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-container">
+      <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../hvac/" class="nav-link active">HVAC</a>
+        <a href="../concrete/" class="nav-link">Concrete</a>
+        <a href="../landscaping/" class="nav-link">Landscaping</a>
+        <a href="../flooring/" class="nav-link">Flooring</a>
+        <a href="../roofing/" class="nav-link">Roofing</a>
+        <a href="../painting/" class="nav-link">Painting</a>
+        <a href="../hvac/btu-calculator.html" class="nav-link nav-cta">Start Calculating</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--c-white);border-bottom:1px solid var(--c-border)">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../hvac/">HVAC</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>CFM Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="calc-page-hero">
+    <div class="container">
+      <div class="badge badge-blue" style="margin-bottom:0.75rem">HVAC Calculator</div>
+      <h1>CFM Calculator</h1>
+      <p>Calculate the cubic feet per minute of airflow required for proper ventilation in any room. Enter room dimensions and set your target air changes per hour (ACH) to correctly size ductwork, fans, and air handlers.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR LAYOUT -->
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- LEFT: Form -->
+      <div>
+        <div class="calc-box">
+          <div class="calc-box-header"><h2>Enter Your Measurements</h2></div>
+          <div class="calc-box-body">
+            <form id="cfm-form" onsubmit="return false">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="cfm-length">Room Length <span class="unit">(ft)</span></label>
+                  <input type="number" id="cfm-length" class="form-control" placeholder="e.g. 20" min="1" step="0.5">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cfm-width">Room Width <span class="unit">(ft)</span></label>
+                  <input type="number" id="cfm-width" class="form-control" placeholder="e.g. 15" min="1" step="0.5">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cfm-height">Ceiling Height <span class="unit">(ft)</span></label>
+                <input type="number" id="cfm-height" class="form-control" placeholder="8" value="8" min="6" max="30" step="0.5">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cfm-ach">Air Changes Per Hour <span class="unit">(ACH)</span></label>
+                <input type="number" id="cfm-ach" class="form-control" placeholder="6" value="6" min="1" max="60" step="0.5">
+                <p class="form-hint">Typical values: Bedroom 4–6 ACH &nbsp;|&nbsp; Living Room 6–8 ACH &nbsp;|&nbsp; Kitchen 7–8 ACH &nbsp;|&nbsp; Bathroom 6–8 ACH</p>
+              </div>
+
+              <div style="display:flex;gap:1rem;margin-top:1.5rem">
+                <button type="button" class="btn btn-primary btn-full" onclick="calcCFM()">Calculate</button>
+                <button type="button" class="btn btn-secondary" onclick="resetCalc('cfm-form','cfm-results')">Reset</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- SEO Content -->
+        <div class="seo-content mt-6">
+          <h2>Understanding CFM in HVAC Systems</h2>
+          <p>CFM — cubic feet per minute — is the fundamental unit of airflow in HVAC engineering. Every aspect of duct sizing, fan selection, and air handler capacity is specified in CFM. Getting the CFM right ensures that conditioned air reaches every corner of a space efficiently, maintains proper indoor air quality, and allows the system to control humidity effectively.</p>
+
+          <h3>The CFM Formula</h3>
+          <p>The standard CFM calculation for a room is straightforward:</p>
+          <p><strong>CFM = (Room Volume in cubic feet &times; Air Changes Per Hour) &divide; 60</strong></p>
+          <p>Room volume is simply length &times; width &times; ceiling height. Dividing by 60 converts the hourly air change requirement into a per-minute flow rate. For example, a 20 &times; 15 &times; 8 ft room (2,400 cu ft) at 6 ACH requires (2,400 &times; 6) &divide; 60 = <strong>240 CFM</strong>.</p>
+
+          <h3>Air Changes Per Hour (ACH) by Room Type</h3>
+          <ul>
+            <li><strong>Bedroom — 4 to 6 ACH:</strong> Lower ACH keeps bedrooms quieter and minimizes air drafts during sleep.</li>
+            <li><strong>Living Room / Family Room — 6 to 8 ACH:</strong> Standard residential occupancy with normal air quality demands.</li>
+            <li><strong>Kitchen — 7 to 8 ACH:</strong> Cooking generates heat, moisture, and odors that require higher air exchange rates. Range hoods provide supplemental exhaust CFM above the HVAC system.</li>
+            <li><strong>Bathroom — 6 to 8 ACH:</strong> The HVI recommends a minimum of 1 CFM per square foot for bathrooms, with exhaust fans running during and after use to control humidity.</li>
+            <li><strong>Office / Conference Room — 6 to 10 ACH:</strong> Higher occupancy and equipment heat gains justify higher ACH in commercial applications.</li>
+            <li><strong>Server Room / Data Center — 15 to 30+ ACH:</strong> Extremely high heat density requires very high airflow rates.</li>
+          </ul>
+
+          <h3>CFM and Ductwork Sizing</h3>
+          <p>Once you know the required CFM for each room, those values are used to size the supply and return ducts. The relationship between CFM, duct area, and air velocity follows this formula: <strong>CFM = Velocity (ft/min) &times; Duct Area (sq ft)</strong>. Residential ducts typically maintain air velocities of 600–900 FPM (feet per minute) to minimize noise. Commercial systems may operate at 1,000–1,500 FPM. Oversized ducts waste materials and reduce velocity below the minimum needed to carry air to distant registers. Undersized ducts create excessive static pressure, noise, and reduced system efficiency.</p>
+
+          <h3>Total System CFM</h3>
+          <p>For a whole-home or whole-building HVAC design, the total system CFM is the sum of all individual room CFM requirements. The air handler and blower must be sized to deliver at least this total CFM against the static pressure of the duct system. Most residential air handlers are rated for 350–450 CFM per ton of cooling capacity. A properly designed system balances supply and return CFM so that no room is over- or under-pressurized.</p>
+
+          <h3>ASHRAE and Ventilation Standards</h3>
+          <p><strong>ASHRAE Standard 62.2</strong> (residential) and <strong>ASHRAE Standard 62.1</strong> (commercial) are the authoritative references for minimum ventilation rates in the US. They specify outdoor air requirements in CFM per person and CFM per square foot for different occupancy types. Following these standards ensures adequate dilution of indoor pollutants, CO2, and moisture for healthy indoor air quality. Many local building codes reference or adopt these ASHRAE standards.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is CFM in HVAC?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <strong>CFM stands for Cubic Feet per Minute</strong> — the volume of air flowing through an HVAC system, duct, fan, or ventilation opening per minute. It is the primary unit used to size all components of a forced-air HVAC system, including ductwork, air handlers, blowers, diffusers, and exhaust fans. Getting the CFM right ensures proper air distribution, comfort, and indoor air quality throughout a building.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I calculate CFM for a room?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                The standard formula is:<br><br>
+                <strong>CFM = (Room Volume &times; ACH) &divide; 60</strong><br><br>
+                Where room volume = length &times; width &times; ceiling height (all in feet), and ACH is the desired number of air changes per hour. For example: a 20 &times; 15 &times; 8 ft room has a volume of 2,400 cu ft. At 6 ACH: CFM = (2,400 &times; 6) &divide; 60 = <strong>240 CFM</strong>. The calculator above handles this math automatically — just enter your room dimensions and ACH target.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is ACH (air changes per hour)?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <strong>ACH (Air Changes Per Hour)</strong> is the number of times the total volume of air in a room is completely replaced within one hour. A bedroom at 6 ACH means the entire volume of bedroom air cycles through the HVAC system six times every hour. Higher ACH rates mean fresher air, faster cooling or heating, and better pollutant removal — but require larger ducts and more powerful blowers. ACH requirements depend on the room type, occupancy, heat gains, and local code requirements.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How many CFM do I need per square foot?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                There is no universal CFM-per-square-foot standard because ceiling height and ACH requirements differ by room type. As a rough residential rule of thumb, plan for approximately <strong>1 CFM per square foot</strong> in living areas with standard 8-foot ceilings. For kitchens and bathrooms, calculate by room volume and ACH rather than floor area alone. For commercial spaces, ASHRAE 62.1 specifies outdoor air requirements in both CFM per person and CFM per square foot based on occupancy category.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How does CFM affect indoor air quality?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                CFM directly controls how quickly stale, contaminated air is replaced with conditioned fresh air. <strong>Insufficient CFM</strong> leads to stagnant air with elevated CO2 levels, moisture buildup that promotes mold and mildew, accumulation of VOCs, allergens, and other indoor pollutants, and uneven temperatures throughout the space. <strong>Adequate CFM</strong> — matched to the room's ACH requirement — maintains comfortable humidity levels, efficiently removes contaminants, and ensures conditioned air is distributed evenly so every area of the room reaches the desired temperature without hot or cold spots.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: Results -->
+      <div>
+        <div class="results-box" id="cfm-results">
+          <div class="results-box-header"><h2>Results</h2></div>
+          <div class="results-box-body">
+            <div class="results-empty">
+              <div class="results-empty-icon">&#129518;</div>
+              <p>Enter your measurements and click Calculate to see results.</p>
+            </div>
+            <div class="results-data" style="display:none">
+              <div class="result-highlight">
+                <div class="result-label">CFM Required</div>
+                <div class="result-value"><span id="res-cfm">—</span> <span class="result-unit">CFM</span></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Room Volume</div>
+                <div class="result-value"><span id="res-volume">—</span> <span class="result-unit">cubic feet</span></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Air Changes / Hour</div>
+                <div class="result-value"><span id="res-ach">—</span> <span class="result-unit">ACH</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACH Reference Card -->
+        <div style="margin-top:1.5rem;background:var(--blue-50);border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:1.25rem">
+          <h3 style="font-size:var(--text-base);margin-bottom:0.75rem;color:var(--blue-700)">ACH Reference Guide</h3>
+          <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm)">
+            <thead>
+              <tr style="border-bottom:1px solid var(--blue-200)">
+                <th style="text-align:left;padding:0.4rem 0;color:var(--slate-700);font-weight:600">Room Type</th>
+                <th style="text-align:right;padding:0.4rem 0;color:var(--slate-700);font-weight:600">ACH Range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--blue-100)">
+                <td style="padding:0.4rem 0;color:var(--slate-600)">Bedroom</td>
+                <td style="text-align:right;padding:0.4rem 0;color:var(--slate-700);font-weight:500">4–6</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--blue-100)">
+                <td style="padding:0.4rem 0;color:var(--slate-600)">Living Room</td>
+                <td style="text-align:right;padding:0.4rem 0;color:var(--slate-700);font-weight:500">6–8</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--blue-100)">
+                <td style="padding:0.4rem 0;color:var(--slate-600)">Kitchen</td>
+                <td style="text-align:right;padding:0.4rem 0;color:var(--slate-700);font-weight:500">7–8</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--blue-100)">
+                <td style="padding:0.4rem 0;color:var(--slate-600)">Bathroom</td>
+                <td style="text-align:right;padding:0.4rem 0;color:var(--slate-700);font-weight:500">6–8</td>
+              </tr>
+              <tr>
+                <td style="padding:0.4rem 0;color:var(--slate-600)">Office</td>
+                <td style="text-align:right;padding:0.4rem 0;color:var(--slate-700);font-weight:500">6–10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Related Calculators -->
+        <div style="margin-top:1.5rem">
+          <h3 style="font-size:var(--text-lg);margin-bottom:1rem">Related Calculators</h3>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <a href="btu-calculator.html" class="related-calc-link">
+              <div class="icon">&#127777;</div>
+              <div>
+                <div class="name">BTU Calculator</div>
+                <div class="cat">HVAC</div>
+              </div>
+              <span class="arrow">&#8250;</span>
+            </a>
+            <a href="ac-tonnage-calculator.html" class="related-calc-link">
+              <div class="icon">&#10052;</div>
+              <div>
+                <div class="name">AC Tonnage Calculator</div>
+                <div class="cat">HVAC</div>
+              </div>
+              <span class="arrow">&#8250;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+          <p>Professional trade &amp; contractor calculators for HVAC, construction, landscaping, and more. Free, fast, and accurate.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="../hvac/">HVAC Calculators</a></li>
+            <li><a href="../concrete/">Concrete Calculators</a></li>
+            <li><a href="../landscaping/">Landscaping Calculators</a></li>
+            <li><a href="../flooring/">Flooring Calculators</a></li>
+            <li><a href="../roofing/">Roofing Calculators</a></li>
+            <li><a href="../painting/">Painting Calculators</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <ul>
+            <li><a href="../hvac/btu-calculator.html">BTU Calculator</a></li>
+            <li><a href="../landscaping/gravel-calculator.html">Gravel Calculator</a></li>
+            <li><a href="../concrete/concrete-slab-calculator.html">Concrete Calculator</a></li>
+            <li><a href="../flooring/tile-calculator.html">Tile Calculator</a></li>
+            <li><a href="../painting/paint-coverage-calculator.html">Paint Calculator</a></li>
+            <li><a href="../roofing/roof-pitch-calculator.html">Roof Pitch Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TradeCalc.io — All rights reserved. Free contractor calculators updated for 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>

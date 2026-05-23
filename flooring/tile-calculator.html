@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tile Calculator — How Many Tiles Do I Need? | TradeCalc.io</title>
+  <meta name="description" content="Calculate the exact number of tiles needed for any room. Accounts for waste factor, tile size, and room dimensions. Free tile calculator.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tradecalc.io/flooring/tile-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tile Calculator — How Many Tiles Do I Need? | TradeCalc.io">
+  <meta property="og:description" content="Calculate the exact number of tiles needed for any room. Accounts for waste factor, tile size, and room dimensions. Free tile calculator.">
+  <meta property="og:url" content="https://tradecalc.io/flooring/tile-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TradeCalc.io">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tile Calculator — How Many Tiles Do I Need?">
+  <meta name="twitter:description" content="Calculate the exact number of tiles needed for any room. Accounts for waste, tile size, and room dimensions.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Tile Calculator — How Many Tiles Do I Need?",
+        "description": "Calculate the exact number of tiles needed for any room. Accounts for waste factor, tile size, and room dimensions.",
+        "url": "https://tradecalc.io/flooring/tile-calculator.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "TradeCalc.io",
+          "url": "https://tradecalc.io"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tradecalc.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Flooring", "item": "https://tradecalc.io/flooring/" },
+            { "@type": "ListItem", "position": 3, "name": "Tile Calculator", "item": "https://tradecalc.io/flooring/tile-calculator.html" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many tiles do I need for a 10x10 room?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A 10x10 room is 100 square feet. With a standard 12x12 inch tile, you need 100 tiles at minimum. With a 10% waste factor, order 110 tiles. For 18x18 inch tiles, you need approximately 45 tiles base, or 50 with waste. Use our calculator for your specific tile size and room dimensions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What waste factor should I use for tiles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a standard straight-lay tile installation, use a 10% waste factor. For diagonal (45°) patterns, use 15–20% because of the increased angled cuts at the perimeter. For complex layouts, irregular rooms, or large format tiles, 15–20% is a safe choice. Always order a few extra boxes to keep on hand for future repairs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need the same tile calculator for walls and floors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — the calculation is the same for both walls and floors. Enter the length and height (instead of length and width) of your wall surface, the tile size, and the waste factor. The formula is identical: room area divided by tile area, plus waste percentage. The only difference may be the waste factor if you're cutting tiles around outlets, windows, or trim."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate tiles for a diagonal pattern?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a diagonal (45°) tile pattern, enter your room dimensions and tile size as normal, then set the waste factor to 15% or higher. The diagonal layout creates more cuts at the room perimeter, increasing material waste significantly compared to a straight lay. Our calculator lets you enter any waste percentage to account for your specific pattern."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I order extra tiles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, always order extra tiles. Tile patterns and dye lots are periodically discontinued, and replacement tiles from a different dye lot can be noticeably different in color and shade. Most professionals recommend purchasing 10–15% over the calculated amount and storing a few boxes. This gives you tiles on hand for future cracked tile repairs without the risk of a dye lot mismatch."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-container">
+      <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../hvac/" class="nav-link">HVAC</a>
+        <a href="../concrete/" class="nav-link">Concrete</a>
+        <a href="../landscaping/" class="nav-link">Landscaping</a>
+        <a href="../flooring/" class="nav-link active">Flooring</a>
+        <a href="../roofing/" class="nav-link">Roofing</a>
+        <a href="../painting/" class="nav-link">Painting</a>
+        <a href="tile-calculator.html" class="nav-link nav-cta">Start Calculating</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--c-white);border-bottom:1px solid var(--c-border)">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../flooring/">Flooring</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Tile Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALC HERO -->
+  <section class="calc-page-hero">
+    <div class="container">
+      <h1>Tile Calculator</h1>
+      <p>Calculate exactly how many tiles you need for any floor or wall. Enter your room dimensions and tile size to get an accurate count including your chosen waste factor.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR LAYOUT -->
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- FORM -->
+      <div class="calc-box">
+        <div class="calc-box-header">
+          <h2>Enter Your Tile &amp; Room Details</h2>
+        </div>
+        <div class="calc-box-body">
+          <form id="tile-form" onsubmit="return false;">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="tile-room-length">Room Length <span class="unit">(ft)</span></label>
+                <input type="number" id="tile-room-length" class="form-control" placeholder="e.g. 12" min="0.1" step="0.1">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="tile-room-width">Room Width <span class="unit">(ft)</span></label>
+                <input type="number" id="tile-room-width" class="form-control" placeholder="e.g. 10" min="0.1" step="0.1">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="tile-width">Tile Width <span class="unit">(inches)</span></label>
+                <input type="number" id="tile-width" class="form-control" placeholder="e.g. 12" min="1" step="0.25">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="tile-height">Tile Height <span class="unit">(inches)</span></label>
+                <input type="number" id="tile-height" class="form-control" placeholder="e.g. 12" min="1" step="0.25">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="tile-waste">Waste Factor <span class="unit">(%)</span></label>
+              <input type="number" id="tile-waste" class="form-control" value="10" min="0" max="50" step="1">
+              <p class="form-hint">10% for straight lay, 15–20% for diagonal patterns</p>
+            </div>
+
+            <div style="display:flex;gap:1rem;margin-top:0.5rem">
+              <button type="button" class="btn btn-primary btn-full" onclick="calcTile()">Calculate Tiles</button>
+              <button type="button" class="btn btn-secondary" onclick="resetCalc('tile-form','tile-results')" style="white-space:nowrap">Reset</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="results-box" id="tile-results">
+        <div class="results-box-header">
+          <h2>Tile Estimate</h2>
+        </div>
+        <div class="results-box-body">
+
+          <!-- Empty state -->
+          <div class="results-empty">
+            <div class="results-empty-icon">&#129695;</div>
+            <p>Enter your room dimensions and tile size, then click <strong>Calculate Tiles</strong> to see results.</p>
+          </div>
+
+          <!-- Results data -->
+          <div class="results-data" style="display:none">
+
+            <div class="result-highlight">
+              <div class="result-label">Total Tiles to Order</div>
+              <div class="result-value" id="res-tile-total">—</div>
+              <div class="result-unit">tiles (includes waste)</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Room Area</div>
+              <div class="result-value" id="res-tile-area">—</div>
+              <div class="result-unit">square feet</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Tiles Needed (No Waste)</div>
+              <div class="result-value" id="res-tile-base">—</div>
+              <div class="result-unit">tiles</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Extra Tiles for Waste</div>
+              <div class="result-value" id="res-tile-waste-tiles">—</div>
+              <div class="result-unit">additional tiles</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Boxes of 12 Needed</div>
+              <div class="result-value" id="res-tile-boxes">—</div>
+              <div class="result-unit">boxes (12 tiles each)</div>
+            </div>
+
+            <div class="alert alert-info" style="margin-top:1.25rem">
+              Always order extra tiles for future repairs — tile patterns and dye lots can be discontinued.
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="seo-content">
+        <h2>How to Calculate Tile for a Floor or Wall</h2>
+        <p>Calculating tile quantity is straightforward once you know the formula. The key steps are: measure the area to be tiled, determine the area each tile covers, divide to find the base tile count, then add your waste factor to get the final order quantity.</p>
+
+        <h3>The Tile Calculation Formula</h3>
+        <p>The basic formula for calculating tiles is:</p>
+        <ul>
+          <li><strong>Room Area (sq ft)</strong> = Room Length × Room Width</li>
+          <li><strong>Tile Area (sq ft)</strong> = (Tile Width in inches × Tile Height in inches) ÷ 144</li>
+          <li><strong>Base Tile Count</strong> = Room Area ÷ Tile Area (rounded up)</li>
+          <li><strong>Total Tiles to Order</strong> = Base Count × (1 + Waste % ÷ 100) (rounded up)</li>
+        </ul>
+        <p>For example, a 10×12 room (120 sq ft) using 12×12 inch tiles (1 sq ft each) needs 120 tiles as a base. With a 10% waste factor, you'd order 132 tiles — or 11 boxes of 12.</p>
+
+        <h3>Why the Waste Factor Matters</h3>
+        <p>No matter how skilled the installer, cutting tile to fit room edges, corners, doorways, and obstacles always produces offcuts. Damaged or cracked tiles during installation are also common, especially with larger formats that are more brittle to handle. The waste factor ensures you have enough material to complete the job without a mid-project trip to the store — and more importantly, without the risk of purchasing from a different dye lot that won't match.</p>
+        <p>Standard waste factor guidelines:</p>
+        <ul>
+          <li><strong>10%</strong> — Simple rectangular room, straight lay pattern, experienced installer</li>
+          <li><strong>15%</strong> — L-shaped or irregular room, or diagonal (45°) installation pattern</li>
+          <li><strong>20%</strong> — Complex layout, herringbone pattern, first-time installer, or large format tiles</li>
+        </ul>
+
+        <h3>Tile Size Considerations</h3>
+        <p>Tile size significantly affects both the look of the finished floor and the complexity of installation. Smaller tiles (4×4, 6×6) can follow irregular surfaces more easily and have more grout lines, which can improve slip resistance. Larger tiles (12×24, 24×24) create a more modern, seamless look but require a flatter subfloor and more precision during installation.</p>
+        <p>Large format tiles (anything over 15 inches in any dimension) are classified as such by the TCNA (Tile Council of North America) and require:</p>
+        <ul>
+          <li>Subfloor flatness within 1/8" over 10 feet (vs. 3/16" for standard tiles)</li>
+          <li>Medium-bed mortar or large-format mortar to avoid hollow spots</li>
+          <li>Back-buttering tiles for better adhesion coverage</li>
+          <li>Proper grout joint sizing — typically 1/16" to 1/8" minimum</li>
+        </ul>
+
+        <h3>Diagonal vs. Straight Patterns</h3>
+        <p>The installation pattern is the single biggest driver of waste after room size. A <strong>straight or grid pattern</strong> (tiles parallel to walls) is the most efficient — cuts at room edges are typically large usable pieces. A <strong>diagonal pattern</strong> (tiles rotated 45°) runs tiles on an angle across the room. Every piece along the wall perimeter must be cut at 45°, and those triangular offcuts are generally too small to reuse. Expect 15–20% waste for diagonal layouts.</p>
+
+        <h3>Subfloor Preparation Matters</h3>
+        <p>Before calculating material, assess the substrate. Tiles crack when installed on a flexible or uneven surface. For floors, the subfloor must be dry, flat, and structurally sound. Concrete must pass a moisture test. Wood subfloors typically need cement board or uncoupling membrane (like Schluter Ditra) as an intermediate layer. Skipping proper subfloor prep is the most common cause of tile installation failures — and it means ripping out and replacing all your material.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-section">
+        <h2>Tile Calculator — Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            How many tiles do I need for a 10x10 room?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              A 10x10 room has 100 square feet of area. With a standard 12x12 inch tile (1 sq ft each), you need a minimum of 100 tiles. Adding a 10% waste factor brings that to 110 tiles, or 10 boxes of 12. For 18x18 inch tiles (2.25 sq ft each), you need approximately 45 base tiles — or 50 with waste. Use our calculator above for any combination of room size and tile dimensions.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            What waste factor should I use for tiles?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              For a standard straight-lay installation in a simple rectangular room, use 10% waste. For diagonal (45°) patterns, use 15–20% because the angled cuts at the perimeter create more unusable offcuts. For complex, L-shaped, or multi-room layouts, or if you're a first-time installer, 15–20% is a safer buffer. When in doubt, buy more — tile dye lots are discontinued regularly, making future replacements very difficult.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Do I need the same tile calculator for walls and floors?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes — the underlying calculation is identical for walls and floors. For a wall, enter the wall length and height instead of room length and width. The tile coverage formula is the same: area divided by tile size plus waste. The only adjustments you may want to make are for the waste factor, since wall tiles often have more cuts around outlets, switches, windows, and trim than floor tiles in an open room.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            How do I calculate tiles for a diagonal pattern?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              To calculate tiles for a diagonal (45°) pattern, enter your room dimensions and tile size as usual, then set the waste factor to 15–20%. The higher waste percentage accounts for the increased number of angled cuts along every wall perimeter. In a diagonal layout, the tiles at the edges of the room must all be cut at 45°, and those triangular offcuts are generally too small to reuse elsewhere. Our calculator lets you enter any waste percentage, so simply bump it up to 15 or 20 for diagonal work.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Should I order extra tiles?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Absolutely — always order extra tiles beyond your calculated need. Tile manufacturers produce tiles in batches called dye lots, and the color can vary slightly between lots. If you run short and need to buy more later, the new tiles may not match. Most experienced tile contractors order an extra 10–15% and store a box or two after completion. This gives you tiles on hand if any crack or chip in the future, ensuring a perfect match.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED CALCULATORS -->
+  <section class="section-sm" style="background:var(--c-bg)">
+    <div class="container">
+      <h3 style="margin-bottom:1rem;font-size:var(--text-lg)">Related Calculators</h3>
+      <div class="grid-2" style="max-width:600px">
+        <a href="flooring-waste-calculator.html" class="related-calc-link">
+          <div class="icon">&#128296;</div>
+          <div>
+            <div class="name">Flooring Waste Calculator</div>
+            <div class="cat">Flooring</div>
+          </div>
+          <span class="arrow">&#8594;</span>
+        </a>
+        <a href="../painting/paint-coverage-calculator.html" class="related-calc-link">
+          <div class="icon">&#127774;</div>
+          <div>
+            <div class="name">Paint Coverage Calculator</div>
+            <div class="cat">Painting</div>
+          </div>
+          <span class="arrow">&#8594;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="nav-logo">TradeCalc<span>.io</span></a>
+          <p>Professional trade &amp; contractor calculators for HVAC, construction, landscaping, and more. Free, fast, and accurate.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="../hvac/">HVAC Calculators</a></li>
+            <li><a href="../concrete/">Concrete Calculators</a></li>
+            <li><a href="../landscaping/">Landscaping Calculators</a></li>
+            <li><a href="../flooring/">Flooring Calculators</a></li>
+            <li><a href="../roofing/">Roofing Calculators</a></li>
+            <li><a href="../painting/">Painting Calculators</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <ul>
+            <li><a href="../hvac/btu-calculator.html">BTU Calculator</a></li>
+            <li><a href="../landscaping/gravel-calculator.html">Gravel Calculator</a></li>
+            <li><a href="../concrete/concrete-slab-calculator.html">Concrete Calculator</a></li>
+            <li><a href="../flooring/tile-calculator.html">Tile Calculator</a></li>
+            <li><a href="../painting/paint-coverage-calculator.html">Paint Calculator</a></li>
+            <li><a href="../roofing/roof-pitch-calculator.html">Roof Pitch Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TradeCalc.io — All rights reserved. Free contractor calculators updated for 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>
